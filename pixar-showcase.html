@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIXAR — 映画の世界へ</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./pixar.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">PIXAR</div>
+  <div class="tagline">映画の世界へようこそ</div>
+</header>
+
+<!-- HOME -->
+<div class="home-page" id="homePage">
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <!-- stars -->
+    <div class="star" style="width:2px;height:2px;top:12%;left:15%;animation-delay:0s"></div>
+    <div class="star" style="width:3px;height:3px;top:25%;left:75%;animation-delay:0.5s"></div>
+    <div class="star" style="width:2px;height:2px;top:60%;left:10%;animation-delay:1s"></div>
+    <div class="star" style="width:1px;height:1px;top:40%;left:85%;animation-delay:1.5s"></div>
+    <div class="star" style="width:2px;height:2px;top:70%;left:55%;animation-delay:0.8s"></div>
+    <div class="star" style="width:3px;height:3px;top:18%;left:45%;animation-delay:0.3s"></div>
+    <div class="star" style="width:1px;height:1px;top:80%;left:30%;animation-delay:1.2s"></div>
+    <div class="star" style="width:2px;height:2px;top:35%;left:92%;animation-delay:0.6s"></div>
+    <h1 class="grad-text" style="background-image:linear-gradient(135deg,#fff 0%,#a78bfa 50%,#60a5fa 100%)">
+      PIXAR<br>UNIVERSE
+    </h1>
+    <p>想像を超えた物語と、あなたの心を動かすキャラクターたちが待っています。</p>
+    <div class="scroll-hint">↓ SCROLL</div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>映画ラインナップ</h2>
+      <p>カードをクリックしてキャラクターページへ</p>
+    </div>
+
+    <div class="movies-grid">
+
+      <!-- Toy Story -->
+      <div class="movie-card" onclick="showChars('toy')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#1a3a6b 0%,#2563eb 60%,#93c5fd 100%)">
+          <div class="icon-scene"><img src="./img/top/toy.jpg" alt=""></div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">1995 · ADVENTURE · COMEDY</div>
+          <div class="movie-title">トイ・ストーリー</div>
+          <div class="movie-desc">おもちゃたちの秘密の世界。ウッディとバズが織りなす友情と冒険の物語。</div>
+          <span class="movie-tag" style="color:#93c5fd;border-color:#2563eb">CLASSIC</span>
+        </div>
+      </div>
+
+      <!-- Finding Nemo -->
+      <div class="movie-card" onclick="showChars('nemo')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#0c2340 0%,#0284c7 60%,#38bdf8 100%)">
+          <div class="icon-scene"><img src="./img/top/nemo.webp" alt=""></div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2003 · ADVENTURE · FAMILY</div>
+          <div class="movie-title">ファインディング・ニモ</div>
+          <div class="movie-desc">広大な海を越えた父と息子の絆。息を呑む海中世界が舞台の感動作。</div>
+          <span class="movie-tag" style="color:#38bdf8;border-color:#0284c7">OCEAN</span>
+        </div>
+      </div>
+
+      <!-- The Incredibles -->
+      <div class="movie-card" onclick="showChars('incredibles')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#4a0000 0%,#dc2626 60%,#fca5a5 100%)">
+          <div class="icon-scene"><img src="./img/top/inc.jpg" alt=""></div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2004 · ACTION · FAMILY</div>
+          <div class="movie-title">Mr.インクレディブル</div>
+          <div class="movie-desc">スーパーヒーロー一家の活躍と家族の絆。スタイリッシュなアクションと笑いが満載。</div>
+          <span class="movie-tag" style="color:#fca5a5;border-color:#dc2626">SUPERHERO</span>
+        </div>
+      </div>
+
+      <!-- WALL-E -->
+      <div class="movie-card" onclick="showChars('walle')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#1a120a 0%,#92400e 60%,#fbbf24 100%)">
+          <div class="icon-scene">🤖</div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2008 · SCI-FI · ROMANCE</div>
+          <div class="movie-title">WALL·E</div>
+          <div class="movie-desc">遠い未来の地球に残された小さなロボットの、純粋な愛と希望の物語。</div>
+          <span class="movie-tag" style="color:#fbbf24;border-color:#92400e">SCI-FI</span>
+        </div>
+      </div>
+
+      <!-- Up -->
+      <div class="movie-card" onclick="showChars('up')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#0c2810 0%,#16a34a 60%,#86efac 100%)">
+          <div class="icon-scene">🎈</div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2009 · ADVENTURE · DRAMA</div>
+          <div class="movie-title">カールじいさんの空飛ぶ家</div>
+          <div class="movie-desc">無数の風船と共に空へ飛び立つ老人の夢と冒険。涙と笑いの感動作。</div>
+          <span class="movie-tag" style="color:#86efac;border-color:#16a34a">ADVENTURE</span>
+        </div>
+      </div>
+
+      <!-- Inside Out -->
+      <div class="movie-card" onclick="showChars('insideout')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#1e0a3c 0%,#7c3aed 60%,#c4b5fd 100%)">
+          <div class="icon-scene">🧠</div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2015 · ANIMATION · DRAMA</div>
+          <div class="movie-title">インサイド・ヘッド</div>
+          <div class="movie-desc">感情たちが暮らす「頭の中」の世界。ライリーの心を守るため奔走するキャラクターたち。</div>
+          <span class="movie-tag" style="color:#c4b5fd;border-color:#7c3aed">EMOTION</span>
+        </div>
+      </div>
+
+      <!-- Coco -->
+      <div class="movie-card" onclick="showChars('coco')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#3d0a00 0%,#ea580c 60%,#fdba74 100%)">
+          <div class="icon-scene">🎸</div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2017 · MUSICAL · FAMILY</div>
+          <div class="movie-title">リメンバー・ミー</div>
+          <div class="movie-desc">「死者の国」を舞台に繰り広げられる音楽と家族の絆。メキシコの文化が彩るミュージカル。</div>
+          <span class="movie-tag" style="color:#fdba74;border-color:#ea580c">MUSIC</span>
+        </div>
+      </div>
+
+      <!-- Soul -->
+      <div class="movie-card" onclick="showChars('soul')">
+        <div class="movie-visual" style="background:linear-gradient(135deg,#091520 0%,#0f766e 60%,#5eead4 100%)">
+          <div class="icon-scene">🎷</div>
+          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-year">2020 · DRAMA · MUSIC</div>
+          <div class="movie-title">ソウルフル・ワールド</div>
+          <div class="movie-desc">「魂の世界」で問いかける「生きる目的」とは何か。ジャズと哲学が融合した傑作。</div>
+          <span class="movie-tag" style="color:#5eead4;border-color:#0f766e">JAZZ</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /home-page -->
+
+
+<!-- ── CHARACTER PAGES ── -->
+
+<!-- TOY STORY -->
+<div class="char-page" id="char-toy">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#0f1f3d 0%,#1e3a6b 100%)">
+    <div class="char-hero-visual">🤠</div>
+    <div class="char-hero-text">
+      <div class="year-badge">1995 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#93c5fd,#fff)">トイ・ストーリー</h1>
+      <p>アンディの部屋で生きるおもちゃたち。人間が見ていない時、彼らは動き、話し、笑い、泣く。友情と成長の物語。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
+      <span class="char-emoji"><img src="./img/cara/wo.png" alt=""></span>
+      <div class="char-name">ウッディ</div>
+      <div class="char-role">カウボーイ人形 · リーダー</div>
+      <div class="char-quote">"Reach for the sky!" 空に向かって手を上げな！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
+      <span class="char-emoji"><img src="./img/cara/baz.png" alt=""></span>
+      <div class="char-name">バズ・ライトイヤー</div>
+      <div class="char-role">スペースレンジャー</div>
+      <div class="char-quote">"To infinity and beyond!" 無限の彼方へ！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
+      <span class="char-emoji">🐷</span>
+      <div class="char-name">ハム</div>
+      <div class="char-role">貯金箱ブタ · 物知り</div>
+      <div class="char-quote">ちゃっかり屋だけど頼りになる。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
+      <span class="char-emoji">🐍</span>
+      <div class="char-name">スリンキー</div>
+      <div class="char-role">バネ犬 · 忠実な仲間</div>
+      <div class="char-quote">どんな時もウッディの味方。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
+      <span class="char-emoji">🧸</span>
+      <div class="char-name">ジェシー</div>
+      <div class="char-role">カウガール人形 · 元気者</div>
+      <div class="char-quote">ぱっと明るく、どんなピンチも乗り越える！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
+      <span class="char-emoji">👾</span>
+      <div class="char-name">リトル・グリーンメン</div>
+      <div class="char-role">UFOキャッチャーの宇宙人</div>
+      <div class="char-quote">"The Claw!" ザ・クロー！！</div>
+    </div>
+  </div>
+</div>
+
+<!-- NEMO -->
+<div class="char-page" id="char-nemo">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#051524 0%,#0c3a5c 100%)">
+    <div class="char-hero-visual">🐠</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2003 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#38bdf8,#fff)">ファインディング・ニモ</h1>
+      <p>大海原を越えて、息子を探す父マーリンの旅。出会いと別れ、そして「家族」の意味を問いかける感動の海洋冒険。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
+      <span class="char-emoji"><img src="./img/cara/mani.jpeg" alt=""></span>
+      <div class="char-name">マーリン</div>
+      <div class="char-role">クマノミ · ニモのパパ</div>
+      <div class="char-quote">心配性だけど誰より愛情深い父。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
+      <span class="char-emoji"><img src="./img/cara/nimo.png" alt=""></span>
+      <div class="char-name">ニモ</div>
+      <div class="char-role">クマノミ · 冒険好きな息子</div>
+      <div class="char-quote">小さくても勇気は誰にも負けない！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
+      <span class="char-emoji"><img src="./img/cara/dori.jpg" alt=""></span>
+      <div class="char-name">ドリー</div>
+      <div class="char-role">ナンヨウハギ · 忘れっぽい親友</div>
+      <div class="char-quote">"Just keep swimming!" 泳ぎ続けるのよ！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
+      <span class="char-emoji">🐢</span>
+      <div class="char-name">クラッシュ</div>
+      <div class="char-role">ウミガメ · 波乗り上手</div>
+      <div class="char-quote">海流に乗ってどこへでも！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
+      <span class="char-emoji">🦈</span>
+      <div class="char-name">ブルース</div>
+      <div class="char-role">ホオジロザメ · 魚は食べない</div>
+      <div class="char-quote">"Fish are friends, not food!"</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
+      <span class="char-emoji">🦅</span>
+      <div class="char-name">ペリカン</div>
+      <div class="char-role">ナイジェル · 歯科医院の友</div>
+      <div class="char-quote">空から海を繋ぐ、頼れる大きな友達。</div>
+    </div>
+  </div>
+</div>
+
+<!-- INCREDIBLES -->
+<div class="char-page" id="char-incredibles">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#2d0000 0%,#7f1d1d 100%)">
+    <div class="char-hero-visual">🦸</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2004 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fca5a5,#fff)">Mr.インクレディブル</h1>
+      <p>かつての最強ヒーローが家族と共に復活。個性豊かな特殊能力を持つ一家の絆と、本当の「強さ」を問う痛快アクション。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
+      <span class="char-emoji"><img src="./img/cara/inc.jpg" alt=""></span>
+      <div class="char-name">Mr.インクレディブル</div>
+      <div class="char-role">ボブ・パー · 怪力ヒーロー</div>
+      <div class="char-quote">平凡な生活に物足りなさを感じる元最強ヒーロー。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
+      <span class="char-emoji"><img src="./img/cara/irs.jpg" alt=""></span>
+      <div class="char-name">エラスティガール</div>
+      <div class="char-role">ヘレン・パー · 伸縮自在</div>
+      <div class="char-quote">家族を守る、頼れるスーパーママ。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
+      <span class="char-emoji"><img src="./img/cara/dash.jpg" alt=""></span>
+      <div class="char-name">ダッシュ</div>
+      <div class="char-role">長男 · 超スピード</div>
+      <div class="char-quote">世界一速い少年、でも目立ちたくてしょうがない。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
+      <span class="char-emoji"><img src="./img/cara/vaio.jpg" alt=""></span>
+      <div class="char-name">ヴァイオレット</div>
+      <div class="char-role">長女 · 透明化・バリア</div>
+      <div class="char-quote">思春期の悩みと超能力が複雑に絡み合う。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
+      <span class="char-emoji">👶</span>
+      <div class="char-name">ジャック・ジャック</div>
+      <div class="char-role">末っ子 · 万能の赤ちゃん</div>
+      <div class="char-quote">謎だらけの最強ベビー。何の能力があるの？</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
+      <span class="char-emoji">🕶️</span>
+      <div class="char-name">エドナ・モード</div>
+      <div class="char-role">スーパーコスチューム デザイナー</div>
+      <div class="char-quote">"No capes!" マントはダメよ！</div>
+    </div>
+  </div>
+</div>
+
+<!-- WALL-E -->
+<div class="char-page" id="char-walle">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#1a0f00 0%,#78350f 100%)">
+    <div class="char-hero-visual">🤖</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2008 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fbbf24,#fff)">WALL·E</h1>
+      <p>荒廃した地球に一人残されたゴミ処理ロボット。純粋な好奇心と、出会いから芽生える「愛」の形。言葉少なく、心に響く傑作。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(251,191,36,0.3)">
+      <span class="char-emoji">🤖</span>
+      <div class="char-name">WALL·E</div>
+      <div class="char-role">廃棄物処理ロボット</div>
+      <div class="char-quote">700年間ゴミを集め続けた、孤独で好奇心旺盛なロボット。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(251,191,36,0.3)">
+      <span class="char-emoji">🤍</span>
+      <div class="char-name">イヴ</div>
+      <div class="char-role">環境探索ロボット</div>
+      <div class="char-quote">スタイリッシュで高性能。WALL·Eが一目惚れした相手。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(251,191,36,0.3)">
+      <span class="char-emoji">🪳</span>
+      <div class="char-name">ハル</div>
+      <div class="char-role">WALL·Eの唯一の友達（ゴキブリ）</div>
+      <div class="char-quote">700年共に生きた、最も忠実な親友。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(251,191,36,0.3)">
+      <span class="char-emoji">🔴</span>
+      <div class="char-name">AUTO</div>
+      <div class="char-role">宇宙船の操縦AI</div>
+      <div class="char-quote">命令に忠実な冷徹なオートパイロット。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(251,191,36,0.3)">
+      <span class="char-emoji">🧹</span>
+      <div class="char-name">MO</div>
+      <div class="char-role">清掃ロボット</div>
+      <div class="char-quote">WALL·Eの汚れを徹底的に追いかける掃除屋。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(251,191,36,0.3)">
+      <span class="char-emoji">👨‍🚀</span>
+      <div class="char-name">船長</div>
+      <div class="char-role">アクシオム号の船長</div>
+      <div class="char-quote">怠惰な生活から目覚め、地球を取り戻そうとする人間。</div>
+    </div>
+  </div>
+</div>
+
+<!-- UP -->
+<div class="char-page" id="char-up">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#052010 0%,#14532d 100%)">
+    <div class="char-hero-visual">🎈</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2009 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#86efac,#fff)">カールじいさんの空飛ぶ家</h1>
+      <p>妻との夢を叶えるために、家を風船で空へ飛ばす老人。少年と犬と共に辿り着く、感動の冒険の結末。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
+      <span class="char-emoji">👴</span>
+      <div class="char-name">カール・フレドリクセン</div>
+      <div class="char-role">頑固な老人 · 冒険家</div>
+      <div class="char-quote">愛する妻との約束を守るため、78歳で旅に出る。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
+      <span class="char-emoji">🧒</span>
+      <div class="char-name">ラッセル</div>
+      <div class="char-role">スカウト少年 · お喋り好き</div>
+      <div class="char-quote">バッジ集めに夢中。カールのことを変えていく少年。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
+      <span class="char-emoji">🐕</span>
+      <div class="char-name">ダグ</div>
+      <div class="char-role">おしゃべり犬 · 純粋な心</div>
+      <div class="char-quote">"I just met you and I love you!" 大好き！</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
+      <span class="char-emoji">🐦</span>
+      <div class="char-name">ケヴィン</div>
+      <div class="char-role">幻の巨大鳥 · 珍しい生き物</div>
+      <div class="char-quote">世紀の発見？ ラッセルが名前をつけた謎の鳥。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
+      <span class="char-emoji">🧓</span>
+      <div class="char-name">チャールズ・マンツ</div>
+      <div class="char-role">伝説の冒険家 · ヴィラン</div>
+      <div class="char-quote">少年時代のカールの憧れが、まさかの敵に。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
+      <span class="char-emoji">🏠</span>
+      <div class="char-name">カールの家</div>
+      <div class="char-role">空飛ぶ家 · 思い出の詰まった家</div>
+      <div class="char-quote">エリーとの数十年分の愛が宿る、物語の主役。</div>
+    </div>
+  </div>
+</div>
+
+<!-- INSIDE OUT -->
+<div class="char-page" id="char-insideout">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#110824 0%,#4c1d95 100%)">
+    <div class="char-hero-visual">🧠</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2015 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#c4b5fd,#fff)">インサイド・ヘッド</h1>
+      <p>11歳の少女ライリーの「頭の中」で生きる感情たち。喜び、悲しみ、怒り、嫌悪、恐怖が織りなす、感情の冒険。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
+      <span class="char-emoji">😄</span>
+      <div class="char-name">ヨロコビ</div>
+      <div class="char-role">喜びの感情 · リーダー</div>
+      <div class="char-quote">ライリーを幸せにすることだけを考えるポジティブな感情。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
+      <span class="char-emoji">😢</span>
+      <div class="char-name">カナシミ</div>
+      <div class="char-role">悲しみの感情</div>
+      <div class="char-quote">役に立てないと思っていたが、実は最も重要な感情。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
+      <span class="char-emoji">😡</span>
+      <div class="char-name">イカリ</div>
+      <div class="char-role">怒りの感情</div>
+      <div class="char-quote">頭から炎を出す短気者。でも正義感が強い。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
+      <span class="char-emoji">😱</span>
+      <div class="char-name">ビビリ</div>
+      <div class="char-role">恐怖の感情</div>
+      <div class="char-quote">危険を察知する。怖がりだけど、ライリーを守る。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
+      <span class="char-emoji">🤢</span>
+      <div class="char-name">ムカムカ</div>
+      <div class="char-role">嫌悪の感情</div>
+      <div class="char-quote">センスが高く、ライリーのファッションと食事を管理。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
+      <span class="char-emoji">🌈</span>
+      <div class="char-name">ビンボン</div>
+      <div class="char-role">ライリーの想像上の友達</div>
+      <div class="char-quote">忘れられつつある大切な思い出。最後の選択が涙を誘う。</div>
+    </div>
+  </div>
+</div>
+
+<!-- COCO -->
+<div class="char-page" id="char-coco">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#2d0800 0%,#9a3412 100%)">
+    <div class="char-hero-visual">🎸</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2017 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fdba74,#fff)">リメンバー・ミー</h1>
+      <p>「死者の日」に死者の国に迷い込んだ少年ミゲル。先祖たちとの出会いを通して、家族の愛と音楽の意味を知る。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
+      <span class="char-emoji">🎸</span>
+      <div class="char-name">ミゲル</div>
+      <div class="char-role">音楽好きな少年</div>
+      <div class="char-quote">音楽を禁じられた家族に反発し、夢を追う12歳の少年。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
+      <span class="char-emoji">💀</span>
+      <div class="char-name">ヘクター</div>
+      <div class="char-role">死者の国の住人</div>
+      <div class="char-quote">明るくてずる賢い。でも秘密を抱えた哀しい男。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
+      <span class="char-emoji">🎤</span>
+      <div class="char-name">デラクルス</div>
+      <div class="char-role">伝説の歌手</div>
+      <div class="char-quote">ミゲルが憧れるスーパースター。その裏の顔とは。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
+      <span class="char-emoji">👵</span>
+      <div class="char-name">ママ・ココ</div>
+      <div class="char-role">ミゲルのひいひいおばあちゃん</div>
+      <div class="char-quote">ぼんやりとした記憶の中に宿る、深い愛と悲しみ。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
+      <span class="char-emoji">🐕</span>
+      <div class="char-name">ダンテ</div>
+      <div class="char-role">ミゲルの愛犬</div>
+      <div class="char-quote">陽気なメキシカン・ヘアレス。どこでもついてくる。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
+      <span class="char-emoji">🌺</span>
+      <div class="char-name">先祖たち</div>
+      <div class="char-role">リベラ家の先祖</div>
+      <div class="char-quote">死者の国でも家族を思い続ける、愛情深い人々。</div>
+    </div>
+  </div>
+</div>
+
+<!-- SOUL -->
+<div class="char-page" id="char-soul">
+  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
+  <div class="char-hero" style="background:linear-gradient(135deg,#041010 0%,#134e4a 100%)">
+    <div class="char-hero-visual">🎷</div>
+    <div class="char-hero-text">
+      <div class="year-badge">2020 · PIXAR</div>
+      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#5eead4,#fff)">ソウルフル・ワールド</h1>
+      <p>夢を叶える直前に「魂の世界」へ迷い込んだ音楽家ジョー。「生きる目的」とは何か。ジャズと哲学が融合した傑作。</p>
+    </div>
+  </div>
+  <div class="char-grid">
+    <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
+      <span class="char-emoji">🎹</span>
+      <div class="char-name">ジョー・ガードナー</div>
+      <div class="char-role">音楽教師 · ジャズピアニスト</div>
+      <div class="char-quote">夢を追い続けた男が、生きることの意味を問いなおす。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
+      <span class="char-emoji">💙</span>
+      <div class="char-name">22番</div>
+      <div class="char-role">魂 · 生きることを拒んでいた</div>
+      <div class="char-quote">地球へ行くことを嫌がっていた魂が、変わっていく物語。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
+      <span class="char-emoji">🎷</span>
+      <div class="char-name">ドロシア・ウィリアムズ</div>
+      <div class="char-role">伝説のジャズミュージシャン</div>
+      <div class="char-quote">ジョーの憧れ。クールで実力派の女性アーティスト。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
+      <span class="char-emoji">✨</span>
+      <div class="char-name">テリー</div>
+      <div class="char-role">魂の管理者</div>
+      <div class="char-quote">魂の数を正確に把握する几帳面なカウンター係。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
+      <span class="char-emoji">🌀</span>
+      <div class="char-name">ジェリー</div>
+      <div class="char-role">「生まれる前の世界」の住人</div>
+      <div class="char-quote">魂の輝きを育てる、不思議な存在。</div>
+    </div>
+    <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
+      <span class="char-emoji">🌟</span>
+      <div class="char-name">ゾーン</div>
+      <div class="char-role">究極の集中状態</div>
+      <div class="char-quote">音楽に没入した時に訪れる、あの感覚の正体。</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function showChars(id) {
+  document.getElementById('homePage').classList.add('hidden');
+  document.querySelectorAll('.char-page').forEach(p => p.classList.remove('active'));
+  document.getElementById('char-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function goHome() {
+  document.getElementById('homePage').classList.remove('hidden');
+  document.querySelectorAll('.char-page').forEach(p => p.classList.remove('active'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
