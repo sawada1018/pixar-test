@@ -316,7 +316,7 @@ body.char-active.theme-ratatouille {
   --theme-3: #fca5a5;
   --theme-glow: rgba(220, 38, 38, 0.25);
 }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .char-page.active { display: block; }
 .home-page.hidden { display: none; }
