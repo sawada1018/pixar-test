@@ -124,12 +124,29 @@ header {
   transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
   background: var(--surface);
 }
-.movie-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+/* マウス操作時のみホバー演出（スマホの1タップ目で拡大しない） */
+@media (hover: hover) and (pointer: fine) {
+  .movie-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  }
+  .movie-card:hover .card-overlay { opacity: 1; }
+  .movie-card:hover .enter-btn { opacity: 1; transform: translateY(0); }
 }
-.movie-card:hover .card-overlay { opacity: 1; }
-.movie-card:hover .enter-btn { opacity: 1; transform: translateY(0); }
+
+/* タッチ端末：オーバーレイ非表示・タップでそのまま遷移 */
+@media (hover: none), (pointer: coarse) {
+  .movie-card {
+    transition: opacity 0.2s ease;
+  }
+  .movie-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .card-overlay {
+    display: none;
+  }
+}
 
 .movie-visual {
   aspect-ratio: 3 / 4;
@@ -481,6 +498,20 @@ body.char-active.theme-ratatouille {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 1rem 4rem;
+  }
+
+  .movie-card,
+  .movie-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card-overlay {
+    display: none;
+  }
+
+  .movie-card:active {
+    opacity: 0.88;
   }
 
   .section-title {
