@@ -4,14 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PIXAR — 映画の世界へ</title>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./pixar.css">
 </head>
 <body>
 
 <header>
   <div class="logo"><img src="./img/top/Pixar_new_logo.svg" alt="PIXAR"></div>
-  <div class="tagline">映画の世界へようこそ</div>
+  <div class="header-right">
+    <div class="lang-switcher" aria-label="Language">
+      <button type="button" class="lang-btn active" data-lang="ja">JA</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="ko">KO</button>
+    </div>
+    <div class="tagline" data-i18n="tagline">映画の世界へようこそ</div>
+  </div>
 </header>
 
 <!-- HOME -->
@@ -28,151 +35,178 @@
     <div class="star" style="width:3px;height:3px;top:18%;left:45%;animation-delay:0.3s"></div>
     <div class="star" style="width:1px;height:1px;top:80%;left:30%;animation-delay:1.2s"></div>
     <div class="star" style="width:2px;height:2px;top:35%;left:92%;animation-delay:0.6s"></div>
-    <h1 class="grad-text" style="background-image:linear-gradient(135deg,#fff 0%,#a78bfa 50%,#60a5fa 100%)">
-      PIXAR<br>UNIVERSE
-    </h1>
-    <p>想像を超えた物語と、あなたの心を動かすキャラクターたちが待っています。</p>
-    <div class="scroll-hint">↓ SCROLL</div>
+    <h1 class="grad-text" style="background-image:linear-gradient(135deg,#fff 0%,#a78bfa 50%,#60a5fa 100%)" data-i18n="heroTitle">PIXAR<br>UNIVERSE</h1>
+    <p data-i18n="heroDesc">想像を超えた物語と、あなたの心を動かすキャラクターたちが待っています。</p>
+    <div class="scroll-hint" data-i18n="scrollHint">↓ SCROLL</div>
   </section>
 
   <section>
     <div class="section-title">
-      <h2>映画ラインナップ</h2>
-      <p>カードをクリックしてキャラクターページへ</p>
+      <h2 data-i18n="sectionTitle">映画ラインナップ</h2>
+      <p data-i18n="sectionSub">作品を選んで詳細またはキャラクターを見る</p>
     </div>
 
     <div class="movies-grid">
 
       <!-- Toy Story -->
-      <div class="movie-card" onclick="showChars('toy')">
+      <article class="movie-card" data-movie="toy">
         <div class="movie-visual" style="background:linear-gradient(135deg,#2a5080 0%,#3b82f6 60%,#93c5fd 100%)">
           <div class="icon-scene"><img src="./img/top/toy.jpg" alt="トイ・ストーリー"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">1995 · ADVENTURE · COMEDY</div>
           <div class="movie-title">トイ・ストーリー</div>
           <div class="movie-desc">おもちゃたちの秘密の世界。ウッディとバズが織りなす友情と冒険の物語。</div>
           <span class="movie-tag" style="color:#93c5fd;border-color:#2563eb">CLASSIC</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- Finding Nemo -->
-      <div class="movie-card" onclick="showChars('nemo')">
+      <article class="movie-card" data-movie="nemo">
         <div class="movie-visual" style="background:linear-gradient(135deg,#1a4060 0%,#0284c7 60%,#38bdf8 100%)">
           <div class="icon-scene"><img src="./img/top/nemo.webp" alt="ファインディング・ニモ"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2003 · ADVENTURE · FAMILY</div>
           <div class="movie-title">ファインディング・ニモ</div>
           <div class="movie-desc">広大な海を越えた父と息子の絆。息を呑む海中世界が舞台の感動作。</div>
           <span class="movie-tag" style="color:#38bdf8;border-color:#0284c7">OCEAN</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- The Incredibles -->
-      <div class="movie-card" onclick="showChars('incredibles')">
+      <article class="movie-card" data-movie="incredibles">
         <div class="movie-visual" style="background:linear-gradient(135deg,#6a1818 0%,#dc2626 60%,#fca5a5 100%)">
           <div class="icon-scene"><img src="./img/top/inc.jpg" alt="Mr.インクレディブル"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2004 · ACTION · FAMILY</div>
           <div class="movie-title">Mr.インクレディブル</div>
           <div class="movie-desc">スーパーヒーロー一家の活躍と家族の絆。スタイリッシュなアクションと笑いが満載。</div>
           <span class="movie-tag" style="color:#fca5a5;border-color:#dc2626">SUPERHERO</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
 
       <!-- Up -->
-      <div class="movie-card" onclick="showChars('up')">
+      <article class="movie-card" data-movie="up">
         <div class="movie-visual" style="background:linear-gradient(135deg,#1a5030 0%,#22c55e 60%,#86efac 100%)">
           <div class="icon-scene"><img src="./img/top/up.jpg" alt="カールじいさんの空飛ぶ家"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2009 · ADVENTURE · DRAMA</div>
           <div class="movie-title">カールじいさんの空飛ぶ家</div>
           <div class="movie-desc">無数の風船と共に空へ飛び立つ老人の夢と冒険。涙と笑いの感動作。</div>
           <span class="movie-tag" style="color:#86efac;border-color:#16a34a">ADVENTURE</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- Inside Out -->
-      <div class="movie-card" onclick="showChars('insideout')">
+      <article class="movie-card" data-movie="insideout">
         <div class="movie-visual" style="background:linear-gradient(135deg,#3a1860 0%,#9333ea 60%,#c4b5fd 100%)">
           <div class="icon-scene"><img src="./img/top/insideout.jpg" alt="インサイド・ヘッド"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2015 · ANIMATION · DRAMA</div>
           <div class="movie-title">インサイド・ヘッド</div>
           <div class="movie-desc">感情たちが暮らす「頭の中」の世界。ライリーの心を守るため奔走するキャラクターたち。</div>
           <span class="movie-tag" style="color:#c4b5fd;border-color:#7c3aed">EMOTION</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- Coco -->
-      <div class="movie-card" onclick="showChars('coco')">
+      <article class="movie-card" data-movie="coco">
         <div class="movie-visual" style="background:linear-gradient(135deg,#6a2008 0%,#f97316 60%,#fdba74 100%)">
-          <div class="icon-scene"><img src="./img/top/coco.png" alt="リメンバー・ミー"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
+          <div class="icon-scene"><img src="./img/top/coco.jpg" alt="リメンバー・ミー"></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2017 · MUSICAL · FAMILY</div>
           <div class="movie-title">リメンバー・ミー</div>
           <div class="movie-desc">「死者の国」を舞台に繰り広げられる音楽と家族の絆。メキシコの文化が彩るミュージカル。</div>
           <span class="movie-tag" style="color:#fdba74;border-color:#ea580c">MUSIC</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- Soul -->
-      <div class="movie-card" onclick="showChars('soul')">
+      <article class="movie-card" data-movie="soul">
         <div class="movie-visual" style="background:linear-gradient(135deg,#0a3040 0%,#14b8a6 60%,#5eead4 100%)">
           <div class="icon-scene"><img src="./img/top/soul.jpeg" alt="ソウルフル・ワールド"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2020 · DRAMA · MUSIC</div>
           <div class="movie-title">ソウルフル・ワールド</div>
           <div class="movie-desc">「魂の世界」で問いかける「生きる目的」とは何か。ジャズと哲学が融合した傑作。</div>
           <span class="movie-tag" style="color:#5eead4;border-color:#0f766e">JAZZ</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- Monsters Inc -->
-      <div class="movie-card" onclick="showChars('monsters')">
+      <article class="movie-card" data-movie="monsters">
         <div class="movie-visual" style="background:linear-gradient(135deg,#1a2850 0%,#2563eb 60%,#93c5fd 100%)">
           <div class="icon-scene"><img src="./img/top/mon.jpg" alt="モンスターズ・インク"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2001 · COMEDY · FAMILY</div>
           <div class="movie-title">モンスターズ・インク</div>
           <div class="movie-desc">子供の叫びを集めるモンスターたちの世界。青い怪獣サリーと相棒マイクの大冒険。</div>
           <span class="movie-tag" style="color:#93c5fd;border-color:#2563eb">MONSTER</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- Ratatouille -->
-      <div class="movie-card" onclick="showChars('ratatouille')">
+      <article class="movie-card" data-movie="ratatouille">
         <div class="movie-visual" style="background:linear-gradient(135deg,#4a1808 0%,#dc2626 60%,#fca5a5 100%)">
           <div class="icon-scene"><img src="./img/top/remi.jpg" alt="レミーのおいしいレストラン"></div>
-          <div class="card-overlay"><button class="enter-btn">キャラクターを見る →</button></div>
         </div>
         <div class="movie-info">
           <div class="movie-year">2007 · COMEDY · DRAMA</div>
           <div class="movie-title">レミーのおいしいレストラン</div>
           <div class="movie-desc">料理が大好きなネズミレミーが、パリの名店を目指す。夢とグルメの心温まる物語。</div>
           <span class="movie-tag" style="color:#fca5a5;border-color:#dc2626">GOURMET</span>
+          <div class="movie-card-actions">
+            <button type="button" class="btn-card btn-card-detail" data-go="detail" data-i18n-ui="btnDetail">映画詳細</button>
+            <button type="button" class="btn-card btn-card-chars" data-go="chars" data-i18n-ui="btnChars">キャラクター</button>
+          </div>
         </div>
-      </div>
+      </article>
 
     </div>
   </section>
 </div><!-- /home-page -->
+
+<div class="detail-page" id="detailPage"></div>
 
 
 <!-- ── CHARACTER PAGES ── -->
@@ -432,7 +466,7 @@
 <div class="char-page" id="char-coco">
   <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
   <div class="char-hero" style="background:linear-gradient(135deg,#4a1808 0%,#b84818 100%)">
-    <div class="char-hero-visual"><img src="./img/top/coco.png" alt="リメンバー・ミー"></div>
+    <div class="char-hero-visual"><img src="./img/top/coco.jpg" alt="リメンバー・ミー"></div>
     <div class="char-hero-text">
       <div class="year-badge">2017 · PIXAR</div>
       <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fdba74,#fff)">リメンバー・ミー</h1>
@@ -617,79 +651,7 @@
 </div>
 
 
-<script>
-const CHAR_THEMES = ['toy', 'nemo', 'incredibles', 'up', 'insideout', 'coco', 'soul', 'monsters', 'ratatouille'];
-
-function clearCharTheme() {
-  CHAR_THEMES.forEach(t => {
-    document.body.classList.remove('theme-' + t);
-  });
-  document.body.classList.remove('char-active');
-  document.querySelectorAll('.char-page').forEach(p => {
-    CHAR_THEMES.forEach(t => p.classList.remove('theme-' + t));
-  });
-}
-
-function scrollToTop() {
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-}
-
-function getCharIdFromHash() {
-  const hash = location.hash.replace(/^#/, '');
-  if (!hash || hash === 'home') return null;
-  const id = hash.startsWith('char-') ? hash.slice(5) : hash;
-  if (CHAR_THEMES.includes(id) && document.getElementById('char-' + id)) return id;
-  return null;
-}
-
-function showChars(id, options = {}) {
-  if (!CHAR_THEMES.includes(id) || !document.getElementById('char-' + id)) return;
-
-  scrollToTop();
-  document.getElementById('homePage').classList.add('hidden');
-  clearCharTheme();
-  document.querySelectorAll('.char-page').forEach(p => p.classList.remove('active'));
-  const page = document.getElementById('char-' + id);
-  page.classList.add('active', 'theme-' + id);
-  document.body.classList.add('char-active', 'theme-' + id);
-  requestAnimationFrame(scrollToTop);
-
-  if (!options.skipHashUpdate) {
-    const url = location.pathname + location.search + '#' + id;
-    history.replaceState({ page: 'char', id }, '', url);
-  }
-}
-
-function goHome(options = {}) {
-  scrollToTop();
-  document.getElementById('homePage').classList.remove('hidden');
-  clearCharTheme();
-  document.querySelectorAll('.char-page').forEach(p => p.classList.remove('active'));
-  requestAnimationFrame(scrollToTop);
-
-  if (!options.skipHashUpdate) {
-    history.replaceState({ page: 'home' }, '', location.pathname + location.search);
-  }
-}
-
-function initFromUrl() {
-  const id = getCharIdFromHash();
-  if (id) {
-    showChars(id, { skipHashUpdate: true });
-  } else {
-    goHome({ skipHashUpdate: true });
-  }
-}
-
-window.addEventListener('hashchange', () => {
-  const id = getCharIdFromHash();
-  if (id) showChars(id, { skipHashUpdate: true });
-  else goHome({ skipHashUpdate: true });
-});
-
-initFromUrl();
-</script>
+<script src="./js/i18n.js"></script>
+<script src="./js/pixar.js"></script>
 </body>
 </html>
