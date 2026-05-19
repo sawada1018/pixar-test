@@ -210,12 +210,94 @@ header {
 
 /* ── CHARACTER PAGE ── */
 .char-page {
+  --theme-1: #2a5080;
+  --theme-2: #3b82f6;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(59, 130, 246, 0.22);
   display: none;
   min-height: 100vh;
   padding: 7rem 2rem 4rem;
   max-width: 1100px;
   margin: 0 auto;
   animation: fadeIn 0.4s ease;
+  position: relative;
+}
+.char-page.active > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* キャラクターページ表示中の body 背景（映画トップと同じ色味） */
+body.char-active {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 100% 65% at 50% -8%, var(--theme-glow) 0%, transparent 62%),
+    linear-gradient(180deg, color-mix(in srgb, var(--theme-1) 52%, var(--bg)) 0%, color-mix(in srgb, var(--theme-2) 22%, var(--bg)) 38%, var(--bg) 72%);
+  background-attachment: fixed;
+}
+
+.char-page.theme-toy,
+body.char-active.theme-toy {
+  --theme-1: #2a5080;
+  --theme-2: #3b82f6;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(59, 130, 246, 0.28);
+}
+.char-page.theme-nemo,
+body.char-active.theme-nemo {
+  --theme-1: #1a4060;
+  --theme-2: #0284c7;
+  --theme-3: #38bdf8;
+  --theme-glow: rgba(2, 132, 199, 0.28);
+}
+.char-page.theme-incredibles,
+body.char-active.theme-incredibles {
+  --theme-1: #6a1818;
+  --theme-2: #dc2626;
+  --theme-3: #fca5a5;
+  --theme-glow: rgba(220, 38, 38, 0.25);
+}
+.char-page.theme-up,
+body.char-active.theme-up {
+  --theme-1: #1a5030;
+  --theme-2: #22c55e;
+  --theme-3: #86efac;
+  --theme-glow: rgba(34, 197, 94, 0.25);
+}
+.char-page.theme-insideout,
+body.char-active.theme-insideout {
+  --theme-1: #3a1860;
+  --theme-2: #9333ea;
+  --theme-3: #c4b5fd;
+  --theme-glow: rgba(147, 51, 234, 0.28);
+}
+.char-page.theme-coco,
+body.char-active.theme-coco {
+  --theme-1: #6a2008;
+  --theme-2: #f97316;
+  --theme-3: #fdba74;
+  --theme-glow: rgba(249, 115, 22, 0.28);
+}
+.char-page.theme-soul,
+body.char-active.theme-soul {
+  --theme-1: #0a3040;
+  --theme-2: #14b8a6;
+  --theme-3: #5eead4;
+  --theme-glow: rgba(20, 184, 166, 0.28);
+}
+.char-page.theme-monsters,
+body.char-active.theme-monsters {
+  --theme-1: #1a2850;
+  --theme-2: #2563eb;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(37, 99, 235, 0.28);
+}
+.char-page.theme-ratatouille,
+body.char-active.theme-ratatouille {
+  --theme-1: #4a1808;
+  --theme-2: #dc2626;
+  --theme-3: #fca5a5;
+  --theme-glow: rgba(220, 38, 38, 0.25);
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -232,15 +314,45 @@ header {
   transition: background 0.2s ease;
   letter-spacing: 0.05em;
 }
-.back-btn:hover { background: var(--surface); }
+.char-page .back-btn {
+  border-color: color-mix(in srgb, var(--theme-3) 45%, transparent);
+  background: color-mix(in srgb, var(--theme-1) 25%, transparent);
+}
+.char-page .back-btn:hover {
+  background: color-mix(in srgb, var(--theme-2) 35%, var(--surface));
+  border-color: var(--theme-3);
+}
 
 .char-hero {
   display: flex; align-items: center; gap: 2rem;
   margin-bottom: 3rem;
   padding: 2.5rem;
   border-radius: 24px;
-  border: 0.5px solid var(--border);
-  position: relative; overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--theme-3) 35%, transparent);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--theme-1) 0%, var(--theme-2) 60%, var(--theme-3) 100%);
+  box-shadow: 0 16px 48px color-mix(in srgb, var(--theme-2) 30%, transparent);
+}
+.char-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.12) 0%, transparent 45%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
+}
+.char-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.char-page .char-hero-text h1.grad-text {
+  background-image: linear-gradient(90deg, var(--theme-3), #fff);
+}
+.char-page .char-hero-text .year-badge {
+  color: color-mix(in srgb, var(--theme-3) 85%, #fff);
+}
+.char-page .char-hero-text p {
+  color: rgba(255, 255, 255, 0.82);
 }
 .char-hero-visual {
   flex-shrink: 0;
@@ -282,16 +394,20 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
-.char-card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
+.char-page .char-card {
+  background: color-mix(in srgb, var(--theme-1) 18%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--theme-3) 32%, transparent);
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.char-card:hover { transform: translateY(-4px); }
-.char-card .char-emoji {
+.char-page .char-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--theme-3) 65%, transparent);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--theme-2) 22%, transparent);
+}
+.char-page .char-card .char-emoji {
   width: 100%;
   height: 150px;
   margin-bottom: 0.8rem;
@@ -301,7 +417,10 @@ header {
   font-size: 2.8rem;
   overflow: hidden;
   border-radius: 12px;
-  background: rgba(255,255,255,0.06);
+  background: color-mix(in srgb, var(--theme-2) 15%, rgba(0,0,0,0.2));
+}
+.char-page .char-card .char-quote {
+  border-top-color: color-mix(in srgb, var(--theme-3) 25%, transparent);
 }
 .char-card .char-emoji img {
   width: 100%;
