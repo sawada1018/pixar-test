@@ -32,6 +32,18 @@
   var bundle = u.searchParams.get('bundle') || DEFAULT_BUNDLE;
   var appReferrer = u.searchParams.get('referrer') || ('https://' + bundle);
   var autoplay = u.searchParams.get('autoplay') !== '0';
+  var forceMute = u.searchParams.get('mute');
+  function embedNeedsMutedAutoplay() {
+    if (forceMute === '1') return true;
+    if (forceMute === '0') return false;
+    var ua = navigator.userAgent || '';
+    if (/iPhone|iPod|iPad\b/i.test(ua)) return true;
+    var w = window.innerWidth || 0;
+    if (w < 900) return true;
+    if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches &&
+        window.matchMedia('(hover: none)').matches) return true;
+    return false;
+  }
   var params = new URLSearchParams({
     rel: '0',
     modestbranding: '1',
@@ -41,7 +53,9 @@
   });
   if (autoplay) {
     params.set('autoplay', '1');
-    params.set('mute', '1');
+    if (embedNeedsMutedAutoplay()) {
+      params.set('mute', '1');
+    }
   }
   document.getElementById('player').src =
     'https://www.youtube.com/embed/' + encodeURIComponent(v) + '?' + params;

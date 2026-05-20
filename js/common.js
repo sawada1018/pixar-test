@@ -146,6 +146,21 @@ function youtubeWatchUrl(videoId) {
   return `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
 }
 
+/** モバイル等では無音自動再生のみ許可されることが多い。PCっぽい環境では false を返す */
+function youtubeEmbedNeedsMutedAutoplay() {
+  if (typeof navigator !== 'undefined') {
+    const ua = navigator.userAgent || '';
+    if (/iPhone|iPod|iPad\b/i.test(ua)) return true;
+  }
+  if (typeof window === 'undefined' || !window.matchMedia) return true;
+  const w = window.innerWidth || 0;
+  if (w < 900) return true;
+  const coarse = window.matchMedia('(pointer: coarse)').matches;
+  const noHover = window.matchMedia('(hover: none)').matches;
+  if (coarse && noHover) return true;
+  return false;
+}
+
 function youtubeRelayUrl(videoId, autoplay = true) {
   const url = new URL('youtube-relay.html', location.href);
   url.searchParams.set('v', videoId);
@@ -165,8 +180,9 @@ function youtubeDirectEmbedUrl(videoId, autoplay = true) {
   });
   if (autoplay) {
     params.set('autoplay', '1');
-    /* iOS/Android はミュート時のみ自動再生を許可することが多い */
-    params.set('mute', '1');
+    if (youtubeEmbedNeedsMutedAutoplay()) {
+      params.set('mute', '1');
+    }
   }
   return `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?${params}`;
 }
@@ -194,7 +210,10 @@ function mountDetailVideo(mountEl, videoId, title) {
   }
   if (noteEl) {
     const needsLocalHint = !canUseHttpEmbed();
-    noteEl.textContent = needsLocalHint ? t('ui.videoLocalHint') : t('ui.videoAutoplayHint');
+    const muted = youtubeEmbedNeedsMutedAutoplay();
+    noteEl.textContent = needsLocalHint
+      ? t('ui.videoLocalHint')
+      : (muted ? t('ui.videoAutoplayHint') : t('ui.videoAutoplayHintDesktop'));
     noteEl.hidden = false;
   }
 
