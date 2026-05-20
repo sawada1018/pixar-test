@@ -124,3 +124,30 @@ body.detail-active.theme-luca {
   --theme-glow: rgba(2, 132, 199, 0.28);
   --char-bg: url('../img/back/ruka.webp');
 }
+.char-page.theme-elemental,
+body.char-active.theme-elemental,
+body.detail-active.theme-elemental {
+  --theme-1: #7c2d12;
+  --theme-2: #ea580c;
+  --theme-3: #38bdf8;
+  --theme-glow: rgba(234, 88, 12, 0.28);
+  --char-bg: url('../img/back/myekement.webp');
+}
+.char-page.theme-turningred,
+body.char-active.theme-turningred,
+body.detail-active.theme-turningred {
+  --theme-1: #831843;
+  --theme-2: #db2777;
+  --theme-3: #fda4af;
+  --theme-glow: rgba(236, 72, 153, 0.3);
+  --char-bg: url('../img/back/ressa.webp');
+}
+.char-page.theme-onward,
+body.char-active.theme-onward,
+body.detail-active.theme-onward {
+  --theme-1: #312e81;
+  --theme-2: #6366f1;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(99, 102, 241, 0.28);
+  --char-bg: url('../img/back/2-1.avif');
+}

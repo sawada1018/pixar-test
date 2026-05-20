@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>PIXAR — キャラクター</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../pixar.css">
+</head>
+<body data-page="characters" data-movie="elemental" class="page-characters char-active theme-elemental">
+
+<header>
+  <div class="logo"><a href="../index.html"><img src="../img/top/Pixar_new_logo.svg" alt="PIXAR"></a></div>
+  <div class="header-right">
+    <div class="lang-dropdown" data-lang-dropdown>
+      <button type="button" class="lang-dropdown-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" data-lang-current>日本語</span>
+        <span class="lang-dropdown-chevron" aria-hidden="true"></span>
+      </button>
+      <ul class="lang-dropdown-menu" role="listbox" aria-labelledby="langToggle" hidden>
+        <li><button type="button" class="lang-option" role="option" data-lang="ja">日本語</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="en">English</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="ko">한국어</button></li>
+      </ul>
+    </div>
+    <div class="tagline" data-i18n="tagline">映画の世界へようこそ</div>
+  </div>
+</header>
+
+<main class="char-page char-layout active theme-elemental">
+  <a class="back-btn" href="../index.html">← 映画一覧に戻る</a>
+  <div class="char-intro" id="charIntro">
+    <div class="char-intro-header">
+      <h1 class="grad-text char-intro-title">マイエレメント</h1>
+      <div class="year-badge char-intro-year">2023 · ROMANCE · FANTASY</div>
+      <span class="movie-tag char-intro-tag" style="color:#fdba74;border-color:#ea580c">ELEMENT</span>
+    </div>
+    <div class="char-intro-body">
+      <div class="char-intro-poster">
+        <img src="../img/top/myerement.jpg" alt="マイエレメント" loading="lazy">
+      </div>
+      <div class="char-intro-text">
+        <p class="char-intro-lead">火族のエンバーと水族のウェイド。「触れてはいけない」はずの二人が、エレメントシティの常識と自分の想いの間で揺れる。</p>
+        <p class="char-intro-detail">火・水・土・空気の住民が共存する都市を舞台に、違いを越えた理解とロマンスを描いたピクサーのオリジナル長編。移民・世代・固定観念にも重ねて読めるテーマが込められています。</p>
+      </div>
+    </div>
+    <div class="char-intro-actions">
+      <a class="btn-secondary" href="../detail/elemental.html">予告編を見る →</a>
+    </div>
+  </div>
+  <div class="char-grid" id="charGrid">
+      <article class="char-card" data-char="ember" style="border-color:rgba(251,191,36,0.4)">
+        <span class="char-emoji">
+          <img src="../img/cara/enba.jpeg" alt="エンバー・ルーメン" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">エンバー・ルーメン</div>
+        <div class="char-role">火族の若者 · 父の店を継ぎたい</div>
+        <p class="char-quote">伝統を守るのが私のすべて。</p>
+      </article>
+      <article class="char-card" data-char="wade" style="border-color:rgba(251,191,36,0.4)">
+        <span class="char-emoji">
+          <img src="../img/cara/weid.jpeg" alt="ウェイド・リップル" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ウェイド・リップル</div>
+        <div class="char-role">水族 · 明るく感情的</div>
+        <p class="char-quote">涙も勢いよく、笑いも大声！</p>
+      </article>
+      <article class="char-card" data-char="clod" style="border-color:rgba(251,191,36,0.4)">
+        <span class="char-emoji">
+          <img src="../img/cara/kuroddo.jpg" alt="クロード" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">クロード</div>
+        <div class="char-role">土の住人</div>
+        <p class="char-quote">のんびりまったり。</p>
+      </article>
+      <article class="char-card" data-char="gale" style="border-color:rgba(251,191,36,0.4)">
+        <span class="char-emoji">
+          <img src="../img/cara/geiru.jpeg" alt="ゲイル" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ゲイル</div>
+        <div class="char-role">風の気性の住人</div>
+        <p class="char-quote">急いで運ぶのが仕事。</p>
+      </article>
+      <article class="char-card" data-char="bernie" style="border-color:rgba(251,191,36,0.4)">
+        <span class="char-emoji">
+          <img src="../img/cara/bani.jpeg" alt="バーニー・ルーメン" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">バーニー・ルーメン</div>
+        <div class="char-role">エンバーの父 · 店主</div>
+        <p class="char-quote">この店はうちの誇りだ。</p>
+      </article>
+      <article class="char-card" data-char="cinder" style="border-color:rgba(251,191,36,0.4)">
+        <span class="char-emoji">
+          <img src="../img/cara/bani.jpeg" alt="シンダー・ルーメン" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">シンダー・ルーメン</div>
+        <div class="char-role">エンバーの母 · 実家の味</div>
+        <p class="char-quote">家族の絆は火より熱いわ。</p>
+      </article>
+  </div>
+</main>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/characters.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/movies-ui.js"></script>
+<script src="../js/characters-page.js"></script>
+</body>
+</html>

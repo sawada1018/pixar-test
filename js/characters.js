@@ -13,7 +13,10 @@ const CHAR_IMAGES = {
   cars: { mcqueen: 'baz.jpeg', mater: 'hum.jpeg', sally: 'jesse.jpeg', doc: 'carl.jpeg', ramone: 'wo.jpeg' },
   walle: { walle: 'wo.jpeg', eve: 'baz.jpeg', auto: 'terry.webp', captain: 'bruce.jpeg', moe: 'hum.jpeg' },
   brave: { merida: 'jesse.jpeg', elinor: 'irs.jpeg', fergus: 'bruce.jpeg', mordeu: 'muntz.jpg', witch: 'roz.jpeg' },
-  luca: { luca: 'miguel.jpeg', alberto: 'russell.jpeg', giulia: 'colette.jpeg', ercole: 'ego.jpeg', machiavelli: 'makyaberi.jpeg' }
+  luca: { luca: 'miguel.jpeg', alberto: 'russell.jpeg', giulia: 'colette.jpeg', ercole: 'ego.jpeg', machiavelli: 'makyaberi.jpeg' },
+  elemental: { ember: 'anger.jpeg', wade: 'dori.jpg', clod: 'hum.jpeg', gale: 'fear.jpeg', bernie: 'bruce.jpeg', cinder: 'roz.jpeg' },
+  turningred: { mei: 'joy.jpeg', ming: 'irs.jpeg', priya: 'colette.jpeg', abby: 'boo.jpeg', miriam: 'jesse.jpeg', jin: 'joe.jpeg' },
+  onward: { ian: 'joe.jpeg', barley: 'russell.jpeg', laurel: 'colette.jpeg', wilden: 'ego.jpeg', corey: 'roz.jpeg', colt: 'bruce.jpeg' }
 };
 
 /* キャラクター翻訳 ja / en / ko */
@@ -122,6 +125,30 @@ const CHAR_TRANSLATIONS = {
       giulia: { name: 'ジュリア', role: '少女', quote: '負けないわよ！' },
       ercole: { name: 'エルコーレ', role: 'ヴィラン', quote: 'この町は俺のものだ！' },
       machiavelli: { name: 'マキャベリ', role: 'ジュリアの飼い猫', quote: 'ゴロゴロ……グルグル。' }
+    },
+    elemental: {
+      ember: { name: 'エンバー・ルーメン', role: '火族の若者 · 父の店を継ぎたい', quote: '伝統を守るのが私のすべて。' },
+      wade: { name: 'ウェイド・リップル', role: '水族 · 明るく感情的', quote: '涙も勢いよく、笑いも大声！' },
+      clod: { name: 'クロード', role: '土の住人', quote: 'のんびりまったり。' },
+      gale: { name: 'ゲイル', role: '風の気性の住人', quote: '急いで運ぶのが仕事。' },
+      bernie: { name: 'バーニー・ルーメン', role: 'エンバーの父 · 店主', quote: 'この店はうちの誇りだ。' },
+      cinder: { name: 'シンダー・ルーメン', role: 'エンバーの母 · 実家の味', quote: '家族の絆は火より熱いわ。' }
+    },
+    turningred: {
+      mei: { name: 'メイ・リン・リー', role: '13歳 · 優等生', quote: '親友と4*TOWNがいてくれたら大丈夫！' },
+      ming: { name: 'ミン・リー', role: '母 · 厳しくも愛情深い', quote: 'メイ、お母さんは心配なの。' },
+      priya: { name: 'プリヤ・マングール', role: '親友 · クール', quote: '落ち着いて。' },
+      abby: { name: 'アビー・パーク', role: '親友 · ひと言多いが情に厚い', quote: '大丈夫、メイ！' },
+      miriam: { name: 'ミリアム・メンドルソーン', role: '親友 · 義理人情', quote: '私たちずっと側にいるよ。' },
+      jin: { name: 'ジン・リー', role: '父 · 穏やかな味方', quote: 'ときには歌もいいぞ。' }
+    },
+    onward: {
+      ian: { name: 'イアン・ライトフット', role: '16歳のエルフ · シャイでも芯は強い', quote: '父さんにもう一度会いたい。' },
+      barley: { name: 'バーリー・ライトフット', role: '兄 · 伝説への憧れが止まらない', quote: 'クエストごっこじゃなく本物だ！' },
+      laurel: { name: 'ローレル・ライトフット', role: 'シングルマザー', quote: '息子たちを信じてる。' },
+      wilden: { name: 'ワイルドン・ライトフット', role: '父 · 伝説の名前', quote: '（残されたヴォイスでの温かみ）' },
+      corey: { name: 'コリー・ザ・マンティコア', role: '酒場店主 · 伝説生物', quote: '冒険の心はこの胸に！' },
+      colt: { name: 'コルト・ブロンチョ', role: '警察官 · 義理の親', quote: '安全運転って言ったよね？' }
     }
   },
   en: {
@@ -228,6 +255,30 @@ const CHAR_TRANSLATIONS = {
       giulia: { name: 'Giulia', role: 'Human girl', quote: 'I won\'t lose!' },
       ercole: { name: 'Ercole', role: 'Bully', quote: 'This town is mine!' },
       machiavelli: { name: 'Machiavelli', role: 'Giulia\'s cat', quote: 'Purring in Portorosso.' }
+    },
+    elemental: {
+      ember: { name: 'Ember Lumen', role: 'Fire-town teen · heir to her dad\'s shop', quote: 'Honor the flame—always.' },
+      wade: { name: 'Wade Ripple', role: 'Water guy · big feelings', quote: 'If I cry, the whole room knows.' },
+      clod: { name: 'Clod', role: 'Earth element local', quote: 'Slow and sturdy wins.' },
+      gale: { name: 'Gale', role: 'Temperamental air courier', quote: 'Packages delivered FAST.' },
+      bernie: { name: 'Bernie Lumen', role: 'Ember\'s father · shopkeeper', quote: 'This hearth built our family.' },
+      cinder: { name: 'Cinder Lumen', role: 'Ember\'s mother · cook', quote: 'Season everything with love.' }
+    },
+    turningred: {
+      mei: { name: 'Meilin Lee', role: 'Honor student · red-panda rookie', quote: '4*TOWN FOREVER!' },
+      ming: { name: 'Ming Lee', role: 'Protective mom', quote: 'You will never shame this family!' },
+      priya: { name: 'Priya Mangal', role: 'Deadpan best friend', quote: 'Hmm… spooky.' },
+      abby: { name: 'Abby Park', role: 'Hungry chaotic best friend', quote: 'PUNCH HIM!' },
+      miriam: { name: 'Miriam Mendelsohn', role: 'Ride-or-die best friend', quote: 'We literally invented loyalty.' },
+      jin: { name: 'Jin Lee', role: 'Gentle dad · closet musician', quote: 'Sometimes noise-canceling headphones help dads too.' }
+    },
+    onward: {
+      ian: { name: 'Ian Lightfoot', role: 'Wizard-in-training elf', quote: 'I—I can cast this spell!' },
+      barley: { name: 'Barley Lightfoot', role: 'Quest-obsessed older brother', quote: 'Historic trails await!' },
+      laurel: { name: 'Laurel Lightfoot', role: 'Brave mom warrior', quote: 'My boys are unstoppable.' },
+      wilden: { name: 'Wilden Lightfoot', role: 'Dad half-manifested', quote: 'Walking shoes say everything.' },
+      corey: { name: 'Corey the Manticore', role: 'Former adventurer bartender', quote: 'Maps are sacred texts!' },
+      colt: { name: 'Officer Bronco', role: 'Centaur cop · mom\'s boyfriend', quote: 'Blinkers exist for a reason.' }
     }
   },
   ko: {
@@ -334,6 +385,30 @@ const CHAR_TRANSLATIONS = {
       giulia: { name: '줄리아', role: '소녀', quote: '지지 않아!' },
       ercole: { name: '에르콜레', role: '괴롭힘', quote: '이 마을은 내 것!' },
       machiavelli: { name: '마키아벨리', role: '줄리아의 고양이', quote: '그루룽거리며 포르토로소를 거닐다.' }
+    },
+    elemental: {
+      ember: { name: '엠버 루멘', role: '불의 도시 청년 · 가게 후계자', quote: '전통을 지키는 게 나의 길이야.' },
+      wade: { name: '웨이드 리플', role: '물의 주민 · 유쾌한 감성파', quote: '눈물도 웃음도 다 진심이야!' },
+      clod: { name: '클로드', role: '흙의 주민', quote: '천천히라도 굳건하게.' },
+      gale: { name: '게일', role: '바람 배달 담당', quote: '바쁘니까 비켜!' },
+      bernie: { name: '버니 루멘', role: '엠버의 아버지 · 가게 주인', quote: '이 부뚜막은 우리 가문의 자랑이야.' },
+      cinder: { name: '신더 루멘', role: '엠버의 어머니', quote: '가족 마음은 불보다 뜨거워.' }
+    },
+    turningred: {
+      mei: { name: '메이린 리', role: '13살 모범생 · 레서판다', quote: '4*TOWN과 친구만 있으면 돼!' },
+      ming: { name: '밍 리', role: '까다롭지만 헌신적인 엄마', quote: '우리 가문에 먹칠하면 안 돼.' },
+      priya: { name: '프리야 망갈', role: '쿨한 단짝', quote: '으음… 그렇군.' },
+      abby: { name: '애비 박', role: '시끄럽지만 속은 착한 단짝', quote: '메이, 괜찮아!' },
+      miriam: { name: '미리엄 멘델슨', role: '의리의 단짝', quote: '우리는 항상 같이야.' },
+      jin: { name: '진 리', role: '다정한 아버지', quote: '가끔은 헤드폰도 필요하지.' }
+    },
+    onward: {
+      ian: { name: '이안 라이트풋', role: '수줍지만 강한 마법 견습 엘프', quote: '아빠와… 꼭 또 만나고 싶어.' },
+      barley: { name: '발리 라이트풋', role: '퀘스트 덕후 형', quote: '이건 놀이가 아니라 진짜야!' },
+      laurel: { name: '로럴 라이트풋', role: '싱글 맘 전사', quote: '네 둘이면 무섭지 않아.' },
+      wilden: { name: '와일든 라이트풋', role: '반쯤만 돌아온 아버지', quote: '목소리에 담긴 사랑.' },
+      corey: { name: '코리 더 만티코어', role: '전설 포수 주점 사장', quote: '모험심은 아직 불타고!' },
+      colt: { name: '콜트 브롱코', role: '경찰 의붓아빠', quote: '깜박이 켜야지!' }
     }
   }
 };

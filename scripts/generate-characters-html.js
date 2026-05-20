@@ -23,7 +23,10 @@ const CARD_BORDER = {
   cars: 'rgba(254,202,202,0.35)',
   walle: 'rgba(203,213,225,0.35)',
   brave: 'rgba(134,239,172,0.35)',
-  luca: 'rgba(125,211,252,0.35)'
+  luca: 'rgba(125,211,252,0.35)',
+  elemental: 'rgba(251,191,36,0.4)',
+  turningred: 'rgba(251,113,133,0.4)',
+  onward: 'rgba(129,140,248,0.38)'
 };
 
 function esc(s) {

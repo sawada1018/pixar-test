@@ -12,7 +12,10 @@ const CARD_VISUAL = {
   cars: { gradient: 'linear-gradient(135deg,#7f1d1d 0%,#dc2626 60%,#fecaca 100%)', border: 'rgba(254,202,202,0.35)' },
   walle: { gradient: 'linear-gradient(135deg,#1a2838 0%,#475569 60%,#cbd5e1 100%)', border: 'rgba(203,213,225,0.35)' },
   brave: { gradient: 'linear-gradient(135deg,#14532d 0%,#16a34a 60%,#86efac 100%)', border: 'rgba(134,239,172,0.35)' },
-  luca: { gradient: 'linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#7dd3fc 100%)', border: 'rgba(125,211,252,0.35)' }
+  luca: { gradient: 'linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#7dd3fc 100%)', border: 'rgba(125,211,252,0.35)' },
+  elemental: { gradient: 'linear-gradient(135deg,#7c2d12 0%,#ea580c 60%,#38bdf8 100%)', border: 'rgba(251,191,36,0.4)' },
+  turningred: { gradient: 'linear-gradient(135deg,#831843 0%,#ec4899 60%,#fda4af 100%)', border: 'rgba(251,113,133,0.4)' },
+  onward: { gradient: 'linear-gradient(135deg,#312e81 0%,#6366f1 60%,#93c5fd 100%)', border: 'rgba(129,140,248,0.38)' }
 };
 
 function updateMovieCardsI18n() {

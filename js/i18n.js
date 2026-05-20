@@ -1,4 +1,4 @@
-const MOVIE_IDS = ['toy', 'nemo', 'incredibles', 'up', 'insideout', 'coco', 'soul', 'monsters', 'ratatouille', 'zootopia', 'cars', 'walle', 'brave', 'luca'];
+const MOVIE_IDS = ['toy', 'nemo', 'incredibles', 'up', 'insideout', 'coco', 'soul', 'monsters', 'ratatouille', 'zootopia', 'cars', 'walle', 'brave', 'luca', 'elemental', 'turningred', 'onward'];
 
 /** YouTube 埋め込みのクライアント識別（HTTP Referer / origin / widget_referrer） */
 const APP_BUNDLE_ID = 'com.pixar.universe';
@@ -157,6 +157,33 @@ const I18N = {
         hero: 'イタリアの海辺の町で、人間の姿になって友達と過ごすルカ。秘密を守りながら、世界の広さを知っていく夏。',
         detail: 'ルカとアルベルトの友情、そしてヴェスパでの冒険。イタリアの夏の空気感と、受け入れる勇気が心に残る作品です。',
         highlights: ['1960年代イタリア沿岸を思わせるポルトロッソの色彩と質感', '海の怪物という設定がもたらす秘密とドキドキの青春映画', 'ルカ・アルベルト・ジュリアの三角形の友情の輝き', 'ヴェスパやイタリア映画オマージュなどセンスのよい細部', '恐れずに踏み出す勇気や「違い」をめぐる優しいメッセージ', '短めながら夏の終わりを感じさせる余韻のあるラスト']
+      },
+      elemental: {
+        title: 'マイエレメント',
+        year: '2023 · ROMANCE · FANTASY',
+        tag: 'ELEMENT',
+        desc: '火の少女と水の青年。要素たちが暮らす都市で芽生える恋と、偏見に向き合う物語。',
+        hero: '火族のエンバーと水族のウェイド。「触れてはいけない」はずの二人が、エレメントシティの常識と自分の想いの間で揺れる。',
+        detail: '火・水・土・空気の住民が共存する都市を舞台に、違いを越えた理解とロマンスを描いたピクサーのオリジナル長編。移民・世代・固定観念にも重ねて読めるテーマが込められています。',
+        highlights: ['火と水の質感や光の表現が美しいビジュアル', 'エンバーとウェイドのはじまりから育つロマンス', '父母の店や都市のルールが生むリアルな葛藤', 'コメディと感動のバランスがよい家族ドラマ', '「違い」が当たり前の世界観設定の巧みさ', '都市の全貌が見える迫力あるシーン作り']
+      },
+      turningred: {
+        title: '私ときどきレッサーパンダ',
+        year: '2022 · COMEDY · FAMILY',
+        tag: 'GROWTH',
+        desc: '興奮すると巨大レッサーパンダに変身する13歳。家族の秘密と青春期を描いたカミング・オブ・エイジ。',
+        hero: '成績もバレエも優秀なメイだが、感情が高ぶるとレッサーパンダになる一族の運命がある。親友たちとの秘密と母ミンの期待が錯綜する。',
+        detail: '2002年頃のトロントを舞台に、思春期の身体や感情の揺らぎをファンタジーで昇華。4*TOWN の楽曲とテンポの良いギャグが印象的な、家族と自分らしさの青春ドラマです。',
+        highlights: ['レッサーパンダのふわふわ建模と感情的な作画', 'メイと親友たち（プリヤ・アビー・ミリアム）の絆', '母娘関係や「いい子」プレッシャーをえぐるドラマ', 'トロントの街並みと当時を思わせる細部へのこだわり', 'ユーモアと胸熱シーンが交互にくる構成', '自己肯定や境界線について考えさせられるメッセージ']
+      },
+      onward: {
+        title: '2分の1の魔法',
+        year: '2020 · ADVENTURE · FANTASY',
+        tag: 'QUEST',
+        desc: '魔法がすたれた世界で、亡き父ともう半日だけ過ごすため兄弟が旅する冒険。',
+        hero: 'シャイなイアンと情熱的なバーリー。亡き父が残した杖で上半身だけよみがえった父と、わずか24時間で「完全な再会」を目指して魔法の旅へ。',
+        detail: '近代化したファンタジー郊外と、RPG的なクエストが融合。失った家族への未練と、育ての親である母ローレルへの感謝が静かに重なり合います。',
+        highlights: ['近代サバーバンファンタジーというユニークな世界観', 'イアンとバーリーの対照的な兄弟像と成長', '父の声と足だけが蘇えるシュールで切ないギミック', 'マンティコアの酒場など笑いと冒険の見せ場', '終盤の兄弟の選択に向けられた伏線づくり', '短い時間の中で伝わる「家族とは何か」という問い']
       }
     }
   },
@@ -312,6 +339,33 @@ const I18N = {
         hero: 'Luca explores the human world with his friend Alberto in Portorosso.',
         detail: 'A sun-soaked summer about acceptance, friendship, and Vespa adventures.',
         highlights: ['Sun-drenched Italian riviera textures anchor every seaside shot', 'Sea-monster secret fuels suspense during childhood summers', 'Luca, Alberto, and Giulia triangle celebrates fearless curiosity', 'Vespa dreams and cinema homage sparkle with playful detail', 'Gentle allegory about accepting differences and chosen family', 'Compact runtime leaves a wistful end-of-summer aftertaste']
+      },
+      elemental: {
+        title: 'Elemental',
+        year: '2023 · ROMANCE · FANTASY',
+        tag: 'ELEMENT',
+        desc: 'In a city where fire, water, land, and air residents live separately, sparks fly between Ember and Wade.',
+        hero: 'Fiery Ember and go-with-the-flow Wade were never supposed to mix—yet teamwork across Element City challenges old rules.',
+        detail: 'A romantic fantasy about immigration metaphors, family shops, and learning to embrace what makes you different.',
+        highlights: ['Stunning fire-and-water shaders and shimmering light fx', 'Ember & Wade romance that grows scene by scene', 'Shopkeeper parents and zoning laws feel grounded yet cartoony', 'Heartfelt laughs alongside sincere family tensions', 'World-building that stacks four elemental cultures with clarity', 'Crowd-filled city shots that showcase scale and detail']
+      },
+      turningred: {
+        title: 'Turning Red',
+        year: '2022 · COMEDY · FAMILY',
+        tag: 'GROWTH',
+        desc: 'A confident teen turns into a giant red panda whenever she\'s overwhelmed—welcome to Mei\'s wild adolescence.',
+        hero: 'Honors student Mei juggles crushes, best friends, and a mother who expects perfection while the family curse awakens.',
+        detail: 'Domee Shi\'s playful coming-of-age story blends 2002 Toronto vibes, mythic pandas, and 4*TOWN concerts into pure Pixar energy.',
+        highlights: ['Fluffy red-panda slapstick synced to big emotions', 'Mei\'s fierce friend squad cheering her chaos', 'Ming Mei mother-daughter drama with painfully relatable stakes', 'Nostalgia-rich production design bursting with stickers and posters', 'Whip-smart pacing between cringe comedy and tenderness', 'Message about honoring yourself while loving where you came from']
+      },
+      onward: {
+        title: 'Onward',
+        year: '2020 · ADVENTURE · FANTASY',
+        tag: 'QUEST',
+        desc: 'Two elf brothers resurrect half of their dad for one miraculous day—and race the clock on a heartfelt quest.',
+        hero: 'Shy Ian and quest-obsessed Barley botch a spell, summon Dad\'s legs only, then charge across suburbia chasing full magic.',
+        detail: 'Suburban fantasy collides with tabletop-RPG zeal as grief, gratitude, and brotherhood braid together beautifully.',
+        highlights: ['Mundane SUVs alongside unicorns scavenging trash—world-building bliss', 'Tom Holland / Chris Pratt energy fuels Barley-Ian riffing', 'Half-present Dad gag is bittersweet brilliance', 'Manticore Tavern set piece nails adventure-comedy vibes', 'Emotional breadcrumbs leading to an earned finale choice', 'Explores remembrance without drowning in melodrama']
       }
     }
   },
@@ -467,6 +521,33 @@ const I18N = {
         hero: '이탈리아 해변 마을에서 친구와 보내는 루카의 여름.',
         detail: '루카와 알베르토의 우정, 베스파 모험, 받아들이는 용기.',
         highlights: ['이탈리아 리비에라 같은 포르토로소의 햇살과 질감', '바다 괴물이라는 설정이 주는 긴장과 청춘 영화 정서', '루카·알베르토·줄리아 삼각 우정의 빛깔', '베스파와 영화 오마주 등 세련된 디테일', '다름을 받아들이고 한 발 내딛는 용기의 메시지', '짧지만 여름의 끝을 느끼게 하는 여운']
+      },
+      elemental: {
+        title: '엘리멘탈',
+        year: '2023 · ROMANCE · FANTASY',
+        tag: 'ELEMENT',
+        desc: '불과 물, 땅, 공기의 주민들이 살아가는 도시에서 피어나는 로맨스와 이해.',
+        hero: '불의 소녀 엠버와 물 청년 웨이드. 닿아서는 안 된다고 믿어 온 규칙과 가족과 사이에서 마음이 흔들린다.',
+        detail: '엘리멘트 시티라는 특별한 세계에서 편견과 정체성, 새로운 질서를 노래합니다. 디즈니·픽사의 화려한 오리지널 로맨틱 판타지 장편입니다.',
+        highlights: ['불·물 렌더링과 빛의 연출이 돋보이는 장면', '엠버와 웨이드 로맨스의 설렘 있는 전개', '가게를 지키는 부모와 현실적인 갈등', '웃픈 가족 드라마와 코미디', '네 가지 속성 세계관의 디테일한 설정', '군중과 도시 규모를 보여 주는 장대한 장면들']
+      },
+      turningred: {
+        title: '터닝 레드',
+        year: '2022 · COMEDY · FAMILY',
+        tag: 'GROWTH',
+        desc: '흥분하면 거대 레서판다로 변하는 13살 소녀 메이 이야기. 사춘기와 가족의 비밀이 얽히다.',
+        hero: '완벽한 딸이 되려는 메이에게 주어진 가문의 저주 같은 축복. 친구들과의 소소한 비밀이 엄마 밍의 의심을 산다.',
+        detail: '2002년 토론토를 무대로 사춘기의 혼란을 유쾌하고 솔직하게 그렸습니다. 가상 보이그룹 4*TOWN의 음악도 화제를 모았던 작품입니다.',
+        highlights: ['보송한 레서판다 털 표현과 감정이입 애니메이션', '메이와 셋이 절친 무리의 활기', '모녀 갈등과 기대에서 오는 현실적인 압박', '스티커와 포스터로 가득한 시대감 디자인', '유머와 뭉클함이 교차하는 리듬', '자기다움과 가족 사랑을 함께 말하는 메시지']
+      },
+      onward: {
+        title: '온워드',
+        year: '2020 · ADVENTURE · FANTASY',
+        tag: 'QUEST',
+        desc: '마법이 잊혀 간 세상에서, 돌아가신 아버지와 단 하루를 보내기 위한 형제의 원정.',
+        hero: '수줍은 이안과 던전 애호가인 형 발리. 지팡이 주문 실수로 상반신만 되살려진 아빠를 붙들고 단 하루 안에 마법을 완성하려 떠난다.',
+        detail: '현대 교외판 판타지와 동서 게임 같은 모험이 어우러집니다. 그리움과 감사, 형제 우정을 담담하게 담았습니다.',
+        highlights: ['SUV 와 버려진 길 한복판 유니콘 군 무리 같은 독특한 세계관', '이안과 발리 형제의 극단적인 성향 대비와 성장', '아버지가 목소리와 다리만 존재하는 상황의 애달픔과 유머', '만티코어 주점에서 펼치는 레전드 모험 톤 개그 장면들', '엔딩을 향해 쌓이는 형제 선택의 순간들', '이별 후에 남은 이들 사이 사랑의 의미를 돌아보게 하는 여운']
       }
     }
   }
@@ -486,5 +567,8 @@ const MOVIE_META = {
   cars: { poster: './img/top/cars.jpeg', youtube: 'aiUmg0NOmaM', tagStyle: 'color:#fecaca;border-color:#dc2626' },
   walle: { poster: './img/back/pixcer.jpg', youtube: 'qLkcZGEBqW4', tagStyle: 'color:#cbd5e1;border-color:#64748b' },
   brave: { poster: './img/back/pixcer.jpg', youtube: 'BrsTzu9tdGM', tagStyle: 'color:#86efac;border-color:#16a34a' },
-  luca: { poster: './img/back/pixcer.jpg', youtube: 'cyPgof8yyfA', tagStyle: 'color:#7dd3fc;border-color:#0284c7' }
+  luca: { poster: './img/back/pixcer.jpg', youtube: 'cyPgof8yyfA', tagStyle: 'color:#7dd3fc;border-color:#0284c7' },
+  elemental: { poster: './img/back/pixcer.jpg', youtube: 'ti8XLPHPGGM', tagStyle: 'color:#fdba74;border-color:#ea580c' },
+  turningred: { poster: './img/back/pixcer.jpg', youtube: 'aiB6XwVwqss', tagStyle: 'color:#fda4af;border-color:#fb7185' },
+  onward: { poster: './img/back/pixcer.jpg', youtube: 'Vxz_pQM3nvk', tagStyle: 'color:#93c5fd;border-color:#6366f1' }
 };

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>PIXAR — 映画詳細</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../pixar.css">
+</head>
+<body data-page="detail" data-movie="turningred" class="page-detail detail-active theme-turningred">
+
+<header>
+  <div class="logo"><a href="../index.html"><img src="../img/top/Pixar_new_logo.svg" alt="PIXAR"></a></div>
+  <div class="header-right">
+    <div class="lang-dropdown" data-lang-dropdown>
+      <button type="button" class="lang-dropdown-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" data-lang-current>日本語</span>
+        <span class="lang-dropdown-chevron" aria-hidden="true"></span>
+      </button>
+      <ul class="lang-dropdown-menu" role="listbox" aria-labelledby="langToggle" hidden>
+        <li><button type="button" class="lang-option" role="option" data-lang="ja">日本語</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="en">English</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="ko">한국어</button></li>
+      </ul>
+    </div>
+    <div class="tagline" data-i18n="tagline">映画の世界へようこそ</div>
+  </div>
+</header>
+
+<main class="detail-page detail-layout active" id="detailRoot"></main>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/characters.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/movies-ui.js"></script>
+<script src="../js/detail-page.js"></script>
+</body>
+</html>
