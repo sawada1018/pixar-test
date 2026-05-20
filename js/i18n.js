@@ -1,5 +1,9 @@
 const MOVIE_IDS = ['toy', 'nemo', 'incredibles', 'up', 'insideout', 'coco', 'soul', 'monsters', 'ratatouille'];
 
+/** YouTube 埋め込みのクライアント識別（HTTP Referer / origin / widget_referrer） */
+const APP_BUNDLE_ID = 'com.pixar.universe';
+const APP_REFERER_URL = `https://${APP_BUNDLE_ID}`;
+
 const I18N = {
   ja: {
     ui: {
@@ -16,6 +20,10 @@ const I18N = {
       detailHighlights: '見どころ',
       detailToChars: 'キャラクターを見る →',
       detailFromChars: '← 映画詳細に戻る',
+      detailTrailer: '予告編',
+      linkToDetail: '予告編を見る →',
+      watchOnYoutube: 'YouTubeで予告編を見る',
+      videoLocalHint: 'index.html を直接開くと動画は再生できません。VS Code の Live Server（右クリック → Open with Live Server）で開き直してください。設定変更後は Live Server を一度停止してから再起動してください。',
       langLabel: '言語'
     },
     movies: {
@@ -117,6 +125,10 @@ const I18N = {
       detailHighlights: 'Highlights',
       detailToChars: 'View Characters →',
       detailFromChars: '← Back to Movie Details',
+      detailTrailer: 'Trailer',
+      linkToDetail: 'Watch Trailer →',
+      watchOnYoutube: 'Watch trailer on YouTube',
+      videoLocalHint: 'Videos do not work when opening index.html directly. Use VS Code Live Server (right-click → Open with Live Server), then restart Live Server after config changes.',
       langLabel: 'Language'
     },
     movies: {
@@ -218,6 +230,10 @@ const I18N = {
       detailHighlights: '하이라이트',
       detailToChars: '캐릭터 보기 →',
       detailFromChars: '← 영화 상세로',
+      detailTrailer: '예고편',
+      linkToDetail: '예고편 보기 →',
+      watchOnYoutube: 'YouTube에서 예고편 보기',
+      videoLocalHint: 'index.html을 직접 열면 동영상이 재생되지 않습니다. VS Code Live Server로 연 뒤, 설정 변경 후에는 Live Server를 재시작해 주세요.',
       langLabel: '언어'
     },
     movies: {
@@ -307,13 +323,13 @@ const I18N = {
 };
 
 const MOVIE_META = {
-  toy: { poster: './img/top/toy.jpg', grad: 'linear-gradient(135deg,#2a5080 0%,#3b82f6 60%,#93c5fd 100%)', tagStyle: 'color:#93c5fd;border-color:#2563eb' },
-  nemo: { poster: './img/top/nemo.webp', grad: 'linear-gradient(135deg,#1a4060 0%,#0284c7 60%,#38bdf8 100%)', tagStyle: 'color:#38bdf8;border-color:#0284c7' },
-  incredibles: { poster: './img/top/inc.jpg', grad: 'linear-gradient(135deg,#6a1818 0%,#dc2626 60%,#fca5a5 100%)', tagStyle: 'color:#fca5a5;border-color:#dc2626' },
-  up: { poster: './img/top/up.jpg', grad: 'linear-gradient(135deg,#1a5030 0%,#22c55e 60%,#86efac 100%)', tagStyle: 'color:#86efac;border-color:#16a34a' },
-  insideout: { poster: './img/top/insideout.jpg', grad: 'linear-gradient(135deg,#3a1860 0%,#9333ea 60%,#c4b5fd 100%)', tagStyle: 'color:#c4b5fd;border-color:#7c3aed' },
-  coco: { poster: './img/top/coco.jpg', grad: 'linear-gradient(135deg,#6a2008 0%,#f97316 60%,#fdba74 100%)', tagStyle: 'color:#fdba74;border-color:#ea580c' },
-  soul: { poster: './img/top/soul.jpeg', grad: 'linear-gradient(135deg,#0a3040 0%,#14b8a6 60%,#5eead4 100%)', tagStyle: 'color:#5eead4;border-color:#0f766e' },
-  monsters: { poster: './img/top/mon.jpg', grad: 'linear-gradient(135deg,#1a2850 0%,#2563eb 60%,#93c5fd 100%)', tagStyle: 'color:#93c5fd;border-color:#2563eb' },
-  ratatouille: { poster: './img/top/remi.jpg', grad: 'linear-gradient(135deg,#4a1808 0%,#dc2626 60%,#fca5a5 100%)', tagStyle: 'color:#fca5a5;border-color:#dc2626' }
+  toy: { poster: './img/top/toy.jpg', youtube: 'nsG6Mric9g0', tagStyle: 'color:#93c5fd;border-color:#2563eb' },
+  nemo: { poster: './img/top/nemo.webp', youtube: 'SDPlwNyYKS4', tagStyle: 'color:#38bdf8;border-color:#0284c7' },
+  incredibles: { poster: './img/top/inc.jpg', youtube: '-iM4JHRC2_U', tagStyle: 'color:#fca5a5;border-color:#dc2626' },
+  up: { poster: './img/top/up.jpg', youtube: 'TA900pHzsnQ', tagStyle: 'color:#86efac;border-color:#16a34a' },
+  insideout: { poster: './img/top/insideout.jpg', youtube: 'k2MqRbJLGSQ', tagStyle: 'color:#c4b5fd;border-color:#7c3aed' },
+  coco: { poster: './img/top/coco.jpg', youtube: 'bNO0c3ghCVo', tagStyle: 'color:#fdba74;border-color:#ea580c' },
+  soul: { poster: './img/top/soul.jpeg', youtube: '6M6LpGu-AQU', tagStyle: 'color:#5eead4;border-color:#0f766e' },
+  monsters: { poster: './img/top/mon.jpg', youtube: 'NjcLBbp5NSM', tagStyle: 'color:#93c5fd;border-color:#2563eb' },
+  ratatouille: { poster: './img/top/remi.jpg', youtube: 'LRFkH6lFEXM', tagStyle: 'color:#fca5a5;border-color:#dc2626' }
 };

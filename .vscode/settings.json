@@ -1,0 +1,11 @@
+{
+  "liveServer.settings.headers": {
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "liveServer.settings.httpHeaders": {
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "livePreview.httpHeaders": {
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  }
+}

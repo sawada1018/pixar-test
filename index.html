@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <title>PIXAR — 映画の世界へ</title>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./pixar.css">
@@ -213,15 +215,8 @@
 
 <!-- TOY STORY -->
 <div class="char-page" id="char-toy">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#1a3058 0%,#2d4a7a 100%)">
-    <div class="char-hero-visual"><img src="./img/top/toy.jpg" alt="トイ・ストーリー"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">1995 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#93c5fd,#fff)">トイ・ストーリー</h1>
-      <p>アンディの部屋で生きるおもちゃたち。人間が見ていない時、彼らは動き、話し、笑い、泣く。友情と成長の物語。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
       <span class="char-emoji"><img src="./img/cara/wo.jpeg" alt="ウッディ"></span>
@@ -264,15 +259,8 @@
 
 <!-- NEMO -->
 <div class="char-page" id="char-nemo">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#0a2840 0%,#1a5078 100%)">
-    <div class="char-hero-visual"><img src="./img/top/nemo.webp" alt="ファインディング・ニモ"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2003 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#38bdf8,#fff)">ファインディング・ニモ</h1>
-      <p>大海原を越えて、息子を探す父マーリンの旅。出会いと別れ、そして「家族」の意味を問いかける感動の海洋冒険。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(56,189,248,0.3)">
       <span class="char-emoji"><img src="./img/cara/mani.jpeg" alt="マーリン"></span>
@@ -315,15 +303,8 @@
 
 <!-- INCREDIBLES -->
 <div class="char-page" id="char-incredibles">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#4a1010 0%,#9a2828 100%)">
-    <div class="char-hero-visual"><img src="./img/top/inc.jpg" alt="Mr.インクレディブル"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2004 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fca5a5,#fff)">Mr.インクレディブル</h1>
-      <p>かつての最強ヒーローが家族と共に復活。個性豊かな特殊能力を持つ一家の絆と、本当の「強さ」を問う痛快アクション。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
       <span class="char-emoji"><img src="./img/cara/inc.jpeg" alt="Mr.インクレディブル"></span>
@@ -367,15 +348,8 @@
 
 <!-- UP -->
 <div class="char-page" id="char-up">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#0a3820 0%,#1e7040 100%)">
-    <div class="char-hero-visual"><img src="./img/top/up.jpg" alt="カールじいさんの空飛ぶ家"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2009 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#86efac,#fff)">カールじいさんの空飛ぶ家</h1>
-      <p>妻との夢を叶えるために、家を風船で空へ飛ばす老人。少年と犬と共に辿り着く、感動の冒険の結末。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(134,239,172,0.3)">
       <span class="char-emoji"><img src="./img/cara/carl.jpeg" alt="カール・フレドリクセン"></span>
@@ -413,15 +387,8 @@
 
 <!-- INSIDE OUT -->
 <div class="char-page" id="char-insideout">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#281050 0%,#5c30a0 100%)">
-    <div class="char-hero-visual"><img src="./img/top/insideout.jpg" alt="インサイド・ヘッド"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2015 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#c4b5fd,#fff)">インサイド・ヘッド</h1>
-      <p>11歳の少女ライリーの「頭の中」で生きる感情たち。喜び、悲しみ、怒り、嫌悪、恐怖が織りなす、感情の冒険。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(196,181,253,0.3)">
       <span class="char-emoji"><img src="./img/cara/joy.jpeg" alt="ヨロコビ"></span>
@@ -464,15 +431,8 @@
 
 <!-- COCO -->
 <div class="char-page" id="char-coco">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#4a1808 0%,#b84818 100%)">
-    <div class="char-hero-visual"><img src="./img/top/coco.jpg" alt="リメンバー・ミー"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2017 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fdba74,#fff)">リメンバー・ミー</h1>
-      <p>「死者の日」に死者の国に迷い込んだ少年ミゲル。先祖たちとの出会いを通して、家族の愛と音楽の意味を知る。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(253,186,116,0.3)">
       <span class="char-emoji"><img src="./img/cara/miguel.jpeg" alt="ミゲル"></span>
@@ -510,15 +470,8 @@
 
 <!-- SOUL -->
 <div class="char-page" id="char-soul">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#0a2828 0%,#1a6860 100%)">
-    <div class="char-hero-visual"><img src="./img/top/soul.jpeg" alt="ソウルフル・ワールド"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2020 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#5eead4,#fff)">ソウルフル・ワールド</h1>
-      <p>夢を叶える直前に「魂の世界」へ迷い込んだ音楽家ジョー。「生きる目的」とは何か。ジャズと哲学が融合した傑作。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(94,234,212,0.3)">
       <span class="char-emoji"><img src="./img/cara/joe.jpeg" alt="ジョー・ガードナー"></span>
@@ -555,15 +508,8 @@
 
 <!-- MONSTERS INC -->
 <div class="char-page" id="char-monsters">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#1a2850 0%,#2d4080 100%)">
-    <div class="char-hero-visual"><img src="./img/top/mon.jpg" alt="モンスターズ・インク"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2001 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#93c5fd,#fff)">モンスターズ・インク</h1>
-      <p>モンスター・シティでは、子供の部屋に潜り込み叫び声を集めるのが仕事。しかし一人の少女「ブー」の出現が、すべてを変えていく。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(147,197,253,0.3)">
       <span class="char-emoji"><img src="./img/cara/sari.jpg" alt="サリー"></span>
@@ -606,15 +552,8 @@
 
 <!-- RATATOUILLE -->
 <div class="char-page" id="char-ratatouille">
-  <button class="back-btn" onclick="goHome()">← 映画一覧に戻る</button>
-  <div class="char-hero" style="background:linear-gradient(135deg,#4a1808 0%,#9a2828 100%)">
-    <div class="char-hero-visual"><img src="./img/top/remi.jpg" alt="レミーのおいしいレストラン"></div>
-    <div class="char-hero-text">
-      <div class="year-badge">2007 · PIXAR</div>
-      <h1 class="grad-text" style="background-image:linear-gradient(90deg,#fca5a5,#fff)">レミーのおいしいレストラン</h1>
-      <p>パリの下水道で育ったネズミレミー。一流シェフを目指し、人間の少年リングイニと共に伝説のレストラン「ギュストー」を救おうとする。</p>
-    </div>
-  </div>
+  <button type="button" class="back-btn" data-action="home"></button>
+  <div class="char-intro"></div>
   <div class="char-grid">
     <div class="char-card" style="border-color:rgba(252,165,165,0.3)">
       <span class="char-emoji"><img src="./img/cara/remi.jpeg" alt="レミー"></span>
@@ -652,6 +591,7 @@
 
 
 <script src="./js/i18n.js"></script>
+<script src="./js/characters.js"></script>
 <script src="./js/pixar.js"></script>
 </body>
 </html>
