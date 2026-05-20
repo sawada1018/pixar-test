@@ -163,7 +163,11 @@ function youtubeDirectEmbedUrl(videoId, autoplay = true) {
     widget_referrer: APP_REFERER_URL,
     origin: APP_REFERER_URL
   });
-  if (autoplay) params.set('autoplay', '1');
+  if (autoplay) {
+    params.set('autoplay', '1');
+    /* iOS/Android はミュート時のみ自動再生を許可することが多い */
+    params.set('mute', '1');
+  }
   return `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?${params}`;
 }
 
@@ -189,9 +193,9 @@ function mountDetailVideo(mountEl, videoId, title) {
     external.textContent = t('ui.watchOnYoutube');
   }
   if (noteEl) {
-    const needsHint = !canUseHttpEmbed();
-    noteEl.textContent = needsHint ? t('ui.videoLocalHint') : '';
-    noteEl.hidden = !needsHint;
+    const needsLocalHint = !canUseHttpEmbed();
+    noteEl.textContent = needsLocalHint ? t('ui.videoLocalHint') : t('ui.videoAutoplayHint');
+    noteEl.hidden = false;
   }
 
   mountEl.innerHTML = '';

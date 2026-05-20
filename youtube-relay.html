@@ -41,6 +41,7 @@
   });
   if (autoplay) {
     params.set('autoplay', '1');
+    params.set('mute', '1');
   }
   document.getElementById('player').src =
     'https://www.youtube.com/embed/' + encodeURIComponent(v) + '?' + params;
