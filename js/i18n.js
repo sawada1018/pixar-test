@@ -1,4 +1,4 @@
-const MOVIE_IDS = ['toy', 'nemo', 'incredibles', 'up', 'insideout', 'coco', 'soul', 'monsters', 'ratatouille'];
+const MOVIE_IDS = ['toy', 'nemo', 'incredibles', 'up', 'insideout', 'coco', 'soul', 'monsters', 'ratatouille', 'zootopia', 'cars', 'walle', 'brave', 'luca'];
 
 /** YouTube 埋め込みのクライアント識別（HTTP Referer / origin / widget_referrer） */
 const APP_BUNDLE_ID = 'com.pixar.universe';
@@ -24,7 +24,10 @@ const I18N = {
       linkToDetail: '予告編を見る →',
       watchOnYoutube: 'YouTubeで予告編を見る',
       videoLocalHint: 'index.html を直接開くと動画は再生できません。VS Code の Live Server（右クリック → Open with Live Server）で開き直してください。設定変更後は Live Server を一度停止してから再起動してください。',
-      langLabel: '言語'
+      langLabel: '言語',
+      langJa: '日本語',
+      langEn: 'English',
+      langKo: '한국어'
     },
     movies: {
       toy: {
@@ -107,6 +110,51 @@ const I18N = {
         hero: 'パリの下水道で育ったネズミレミー。一流シェフを目指し、人間の少年リンギニと共に伝説のレストラン「ギュストー」を救おうとする。',
         detail: '料理の才能を持つネズミレミーが、パリの厨房で活躍。「誰でもシェフになれる」というメッセージと、フランスの美食文化が魅力の作品です。',
         highlights: ['パリを舞台にした美食描写', 'レミーの料理シーン', '「Anyone can cook!」']
+      },
+      zootopia: {
+        title: 'ズートピア',
+        year: '2016 · MYSTERY · COMEDY',
+        tag: 'CITY',
+        desc: '動物たちが共存する大都市で、ウサギの警察官とキツネの詐欺師が事件を追う。',
+        hero: '初めて大都会ズートピアにやってきたウサギの警察官ジュディ。大きな事件の捜査で、キツネのニックとタッグを組む。',
+        detail: '偏見と多様性をテーマにした現代風のミステリー。明るいビジュアルとサスペンス、そして心温まる結末が魅力の作品です。',
+        highlights: ['多様な動物たちの都市', 'ジュディとニックのコンビ', '「トライ・エブリシング」']
+      },
+      cars: {
+        title: 'カーズ',
+        year: '2006 · RACING · COMEDY',
+        tag: 'RACING',
+        desc: 'ライトニング・マックィーンがたどり着く、心の成長と友情のレース物語。',
+        hero: '栄光を目指す若きレーサー・マックィーン。偶然立ち寄った田舎町ラジエータースプリングスで、スピード以外の大切なものを学んでいく。',
+        detail: '全米を駆け抜けたスターレーサーが、忘れられた街で出会う仲間たちとの絆。走る喜びと、仲間の大切さを描いたピクサーのレース映画です。',
+        highlights: ['ライトニング・マックィーンの成長', 'ラジエータースプリングスの風景', '仲間との絆']
+      },
+      walle: {
+        title: 'ウォーリー',
+        year: '2008 · SCI-FI · ROMANCE',
+        tag: 'SPACE',
+        desc: '地球を掃除するロボットと、宇宙から来たイヴの静かで美しい恋。',
+        hero: '何百年も地球でゴミを片付け続けるロボット・ウォーリー。ある日現れたイヴとの出会いが、人類の未来を変えていく。',
+        detail: 'ほとんどセリフのない冒頭から始まる、環境と愛の物語。小さなロボットの純粋な想いが、宇宙規模の奇跡を呼び起こします。',
+        highlights: ['映像のみで描かれる序盤', 'ウォーリーとイヴの恋', '環境メッセージ']
+      },
+      brave: {
+        title: 'メリダとおそろしの森',
+        year: '2012 · FANTASY · FAMILY',
+        tag: 'BRAVE',
+        desc: '弓の名手プリンセスが、運命と向き合うスコットランドの物語。',
+        hero: '自分の運命を自分で決めたいメリダ。母との確執が、魔法によって思わぬ形で試される。',
+        detail: 'スコットランドの古城と森を舞台に、親子の理解と自立を描く。ピクサー初のプリンセス主演作としても知られる作品です。',
+        highlights: ['スコットランドの美しい風景', 'メリダの弓のシーン', '母娘の和解']
+      },
+      luca: {
+        title: 'ルカ',
+        year: '2021 · FANTASY · FAMILY',
+        tag: 'SUMMER',
+        desc: '海の怪物の少年が人間の世界で見つける、友情と夏の思い出。',
+        hero: 'イタリアの海辺の町で、人間の姿になって友達と過ごすルカ。秘密を守りながら、世界の広さを知っていく夏。',
+        detail: 'ルカとアルベルトの友情、そしてヴェスパでの冒険。イタリアの夏の空気感と、受け入れる勇気が心に残る作品です。',
+        highlights: ['イタリア・ポルトロッソの町', '海と夏のビジュアル', '友情の物語']
       }
     }
   },
@@ -129,7 +177,10 @@ const I18N = {
       linkToDetail: 'Watch Trailer →',
       watchOnYoutube: 'Watch trailer on YouTube',
       videoLocalHint: 'Videos do not work when opening index.html directly. Use VS Code Live Server (right-click → Open with Live Server), then restart Live Server after config changes.',
-      langLabel: 'Language'
+      langLabel: 'Language',
+      langJa: 'Japanese',
+      langEn: 'English',
+      langKo: 'Korean'
     },
     movies: {
       toy: {
@@ -212,6 +263,51 @@ const I18N = {
         hero: 'Remy the rat teams with Linguini to save a legendary Paris restaurant.',
         detail: 'Remy\'s passion for cooking leads him to Gusteau\'s kitchen. "Anyone can cook" and Parisian cuisine delight audiences.',
         highlights: ['Paris food scenes', 'Remy\'s cooking', '"Anyone can cook!"']
+      },
+      zootopia: {
+        title: 'Zootopia',
+        year: '2016 · MYSTERY · COMEDY',
+        tag: 'CITY',
+        desc: 'A rabbit cop and a fox con artist crack a case in a city of animals.',
+        hero: 'Officer Judy Hopps teams with Nick Wilde on her first big case in Zootopia.',
+        detail: 'A modern mystery about bias and diversity, with humor, suspense, and heart.',
+        highlights: ['Animal metropolis', 'Judy & Nick', '"Try Everything"']
+      },
+      cars: {
+        title: 'Cars',
+        year: '2006 · RACING · COMEDY',
+        tag: 'RACING',
+        desc: 'Lightning McQueen learns growth and friendship on the road.',
+        hero: 'A young racer discovers life beyond speed in Radiator Springs.',
+        detail: 'McQueen\'s journey through a forgotten town and the friends who change him.',
+        highlights: ['McQueen\'s growth', 'Radiator Springs', 'Friendship on the road']
+      },
+      walle: {
+        title: 'WALL·E',
+        year: '2008 · SCI-FI · ROMANCE',
+        tag: 'SPACE',
+        desc: 'A trash-compacting robot and EVE find love across the stars.',
+        hero: 'WALL·E cleans Earth for centuries until EVE arrives and changes everything.',
+        detail: 'A near-wordless opening leads to a sweeping story of love and humanity\'s future.',
+        highlights: ['Visual storytelling', 'WALL·E and EVE', 'Environmental theme']
+      },
+      brave: {
+        title: 'Brave',
+        year: '2012 · FANTASY · FAMILY',
+        tag: 'BRAVE',
+        desc: 'Princess Merida faces fate and family in the Scottish highlands.',
+        hero: 'Merida defies tradition; magic tests her bond with her mother.',
+        detail: 'Archery, ancient Scotland, and a mother-daughter story of understanding.',
+        highlights: ['Scottish landscapes', 'Merida\'s archery', 'Mother and daughter']
+      },
+      luca: {
+        title: 'Luca',
+        year: '2021 · FANTASY · FAMILY',
+        tag: 'SUMMER',
+        desc: 'A sea monster boy discovers friendship and summer in an Italian town.',
+        hero: 'Luca explores the human world with his friend Alberto in Portorosso.',
+        detail: 'A sun-soaked summer about acceptance, friendship, and Vespa adventures.',
+        highlights: ['Portorosso setting', 'Summer by the sea', 'Friendship']
       }
     }
   },
@@ -234,7 +330,10 @@ const I18N = {
       linkToDetail: '예고편 보기 →',
       watchOnYoutube: 'YouTube에서 예고편 보기',
       videoLocalHint: 'index.html을 직접 열면 동영상이 재생되지 않습니다. VS Code Live Server로 연 뒤, 설정 변경 후에는 Live Server를 재시작해 주세요.',
-      langLabel: '언어'
+      langLabel: '언어',
+      langJa: '일본어',
+      langEn: 'English',
+      langKo: '한국어'
     },
     movies: {
       toy: {
@@ -256,7 +355,7 @@ const I18N = {
         highlights: ['압도적인 해저 비주얼', '도리의 명대사', '부자의 유대']
       },
       incredibles: {
-        title: '인크레더블',
+        title: '미스터 인크레더블',
         year: '2004 · ACTION · FAMILY',
         tag: 'SUPERHERO',
         desc: '슈퍼히어로 가족의 활약. 스타일리시한 액션과 유머.',
@@ -317,6 +416,51 @@ const I18N = {
         hero: '쥐 레미가 인간 소년 링귀니와 함께 전설의 레스토랑을 구합니다.',
         detail: '요리 천재 레미의 파리 키친 활약. 「누구나 요리사가 될 수 있다」는 메시지.',
         highlights: ['파리 미식 묘사', '레미의 요리 장면', 'Anyone can cook!']
+      },
+      zootopia: {
+        title: '주토피아',
+        year: '2016 · MYSTERY · COMEDY',
+        tag: 'CITY',
+        desc: '동물 도시에서 토끼 경찰과 여우 사기꾼이 사건을 추적한다.',
+        hero: '주토피아에 온 신입 경찰 주디. 닉과 함께 큰 사건을 해결한다.',
+        detail: '편견과 다양성을 다룬 현대적 미스터리. 유머와 감동이 있는 작품.',
+        highlights: ['다양한 동물 도시', '주디와 닉', 'Try Everything']
+      },
+      cars: {
+        title: '카',
+        year: '2006 · RACING · COMEDY',
+        tag: 'RACING',
+        desc: '라이트닝 맥퀸의 성장과 우정이 담긴 레이스 이야기.',
+        hero: '라디에이터 스프링스에서 속도 이외의 가치를 배우는 맥퀸.',
+        detail: '전설의 레이서가 작은 마을에서 배우는 우정과 삶.',
+        highlights: ['맥퀸의 성장', '마을 풍경', '우정']
+      },
+      walle: {
+        title: '월-E',
+        year: '2008 · SCI-FI · ROMANCE',
+        tag: 'SPACE',
+        desc: '지구를 청소하는 로봇과 이브의 조용한 사랑.',
+        hero: '수백 년 동안 지구를 청소한 월-E. 이브와의 만남이 미래를 바꾼다.',
+        detail: '대사 없는 장면부터 펼쳐지는 환경과 사랑의 이야기.',
+        highlights: ['시각적 연출', '월-E와 이브', '환경 메시지']
+      },
+      brave: {
+        title: '용감한 메리다',
+        year: '2012 · FANTASY · FAMILY',
+        tag: 'BRAVE',
+        desc: '활쏘기 공주 메리다가 운명과 마주하는 스코틀랜드 이야기.',
+        hero: '자신의 운명을 스스로 정하고 싶은 메리다. 마법이 모녀를 시험한다.',
+        detail: '스코틀랜드를 배경으로 한 자립과 가족의 이해.',
+        highlights: ['스코틀랜드 풍경', '활쏘기', '모녀의 화해']
+      },
+      luca: {
+        title: '루카',
+        year: '2021 · FANTASY · FAMILY',
+        tag: 'SUMMER',
+        desc: '바다 괴물 소년이 인간 세계에서 찾는 우정과 여름.',
+        hero: '이탈리아 해변 마을에서 친구와 보내는 루카의 여름.',
+        detail: '루카와 알베르토의 우정, 베스파 모험, 받아들이는 용기.',
+        highlights: ['포르토로소', '여름 바다', '우정']
       }
     }
   }
@@ -325,11 +469,16 @@ const I18N = {
 const MOVIE_META = {
   toy: { poster: './img/top/toy.jpg', youtube: 'nsG6Mric9g0', tagStyle: 'color:#93c5fd;border-color:#2563eb' },
   nemo: { poster: './img/top/nemo.webp', youtube: 'SDPlwNyYKS4', tagStyle: 'color:#38bdf8;border-color:#0284c7' },
-  incredibles: { poster: './img/top/inc.jpg', youtube: '-iM4JHRC2_U', tagStyle: 'color:#fca5a5;border-color:#dc2626' },
+  incredibles: { poster: './img/back/inc.jpg', youtube: '-iM4JHRC2_U', tagStyle: 'color:#fca5a5;border-color:#dc2626' },
   up: { poster: './img/top/up.jpg', youtube: 'TA900pHzsnQ', tagStyle: 'color:#86efac;border-color:#16a34a' },
   insideout: { poster: './img/top/insideout.jpg', youtube: 'k2MqRbJLGSQ', tagStyle: 'color:#c4b5fd;border-color:#7c3aed' },
   coco: { poster: './img/top/coco.jpg', youtube: 'bNO0c3ghCVo', tagStyle: 'color:#fdba74;border-color:#ea580c' },
   soul: { poster: './img/top/soul.jpeg', youtube: '6M6LpGu-AQU', tagStyle: 'color:#5eead4;border-color:#0f766e' },
   monsters: { poster: './img/top/mon.jpg', youtube: 'NjcLBbp5NSM', tagStyle: 'color:#93c5fd;border-color:#2563eb' },
-  ratatouille: { poster: './img/top/remi.jpg', youtube: 'LRFkH6lFEXM', tagStyle: 'color:#fca5a5;border-color:#dc2626' }
+  ratatouille: { poster: './img/top/remi.jpg', youtube: 'LRFkH6lFEXM', tagStyle: 'color:#fca5a5;border-color:#dc2626' },
+  zootopia: { poster: './img/top/zoo.jpeg', youtube: 'MtQ37HlnA_Y', tagStyle: 'color:#c4b5fd;border-color:#7c3aed' },
+  cars: { poster: './img/top/cars.jpeg', youtube: 'aiUmg0NOmaM', tagStyle: 'color:#fecaca;border-color:#dc2626' },
+  walle: { poster: './img/back/pixcer.jpg', youtube: 'qLkcZGEBqW4', tagStyle: 'color:#cbd5e1;border-color:#64748b' },
+  brave: { poster: './img/back/pixcer.jpg', youtube: 'BrsTzu9tdGM', tagStyle: 'color:#86efac;border-color:#16a34a' },
+  luca: { poster: './img/back/pixcer.jpg', youtube: 'cyPgof8yyfA', tagStyle: 'color:#7dd3fc;border-color:#0284c7' }
 };

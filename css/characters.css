@@ -1,0 +1,60 @@
+/* ── CHARACTER PAGE ── */
+.char-page,
+.char-layout {
+  --theme-1: #2a5080;
+  --theme-2: #3b82f6;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(59, 130, 246, 0.22);
+  display: block;
+  min-height: 100vh;
+  padding: 7rem 2rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+.char-page.active > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* キャラクター・映画詳細ページ：img/back の背景画像 + テーマ色オーバーレイ */
+body.char-active,
+body.detail-active {
+  background-color: #1c1c2e;
+}
+
+body.char-active::before,
+body.detail-active::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--char-bg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
+}
+
+body.char-active::after,
+body.detail-active::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 0%, var(--theme-glow) 0%, transparent 55%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--theme-1) 45%, rgba(28, 28, 46, 0.55)) 0%,
+      rgba(28, 28, 46, 0.72) 42%,
+      rgba(28, 28, 46, 0.9) 100%
+    );
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.char-page.active { display: block; }
+.home-page.hidden { display: none; }

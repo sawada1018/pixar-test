@@ -1,4 +1,4 @@
-/* キャラクター画像パス（全言語共通） */
+/* キャラクター画像ファイル名（参考・再生成スクリプト用。表示は characters/*.html の img） */
 const CHAR_IMAGES = {
   toy: { woody: 'wo.jpeg', buzz: 'baz.jpeg', ham: 'hum.jpeg', forky: 'forky.jpeg', jesse: 'jesse.jpeg', alien: 'alien.jpeg' },
   nemo: { marlin: 'mani.jpeg', nemo: 'nimo.jpeg', dory: 'dori.jpg', crash: 'crash.jpeg', bruce: 'bruce.jpeg', nigel: 'pelican.jpeg' },
@@ -8,7 +8,12 @@ const CHAR_IMAGES = {
   coco: { miguel: 'miguel.jpeg', hector: 'hector.webp', delacruz: 'delacruz.jpg', mamaCoco: 'coco.jpeg', dante: 'dante.jpeg' },
   soul: { joe: 'joe.jpeg', twentytwo: '22.jpeg', dorothea: 'dorothea.jpeg', terry: 'terry.webp', jerry: 'jerry.jpeg' },
   monsters: { sully: 'sari.jpg', mike: 'mic.jpeg', boo: 'boo.jpeg', randall: 'randall.jpeg', roz: 'roz.jpeg', celia: 'celia.jpg' },
-  ratatouille: { remy: 'remi.jpeg', linguini: 'ring.jpg', colette: 'colette.jpeg', ego: 'ego.jpeg', emile: 'emi.jpeg' }
+  ratatouille: { remy: 'remi.jpeg', linguini: 'ring.jpg', colette: 'colette.jpeg', ego: 'ego.jpeg', emile: 'emi.jpeg' },
+  zootopia: { judy: 'judhi.jpeg', nick: 'nic.jpeg', bellwether: 'roz.jpeg', bogo: 'bruce.jpeg', flash: 'slinky.jpg', clawhauser: 'hum.jpeg' },
+  cars: { mcqueen: 'baz.jpeg', mater: 'hum.jpeg', sally: 'jesse.jpeg', doc: 'carl.jpeg', ramone: 'wo.jpeg' },
+  walle: { walle: 'wo.jpeg', eve: 'baz.jpeg', auto: 'terry.webp', captain: 'bruce.jpeg', moe: 'hum.jpeg' },
+  brave: { merida: 'jesse.jpeg', elinor: 'irs.jpeg', fergus: 'bruce.jpeg', mordeu: 'muntz.jpg', witch: 'roz.jpeg' },
+  luca: { luca: 'miguel.jpeg', alberto: 'russell.jpeg', giulia: 'colette.jpeg', ercole: 'ego.jpeg', machiavelli: 'makyaberi.jpeg' }
 };
 
 /* キャラクター翻訳 ja / en / ko */
@@ -46,17 +51,17 @@ const CHAR_TRANSLATIONS = {
       muntz: { name: 'チャールズ・マンツ', role: '伝説の冒険家 · ヴィラン', quote: '少年時代のカールの憧れが、まさかの敵に。' }
     },
     insideout: {
-      joy: { name: 'ヨロコビ', role: '喜びの感情 · リーダー', quote: 'ライリーを幸せにすることだけを考えるポジティブな感情。' },
-      sadness: { name: 'カナシミ', role: '悲しみの感情', quote: '役に立てないと思っていたが、実は最も重要な感情。' },
-      anger: { name: 'イカリ', role: '怒りの感情', quote: '頭から炎を出す短気者。でも正義感が強い。' },
-      fear: { name: 'ビビリ', role: '恐怖の感情', quote: '危険を察知する。怖がりだけど、ライリーを守る。' },
-      disgust: { name: 'ムカムカ', role: '嫌悪の感情', quote: 'センスが高く、ライリーのファッションと食事を管理。' },
-      bingbong: { name: 'ビンボン', role: 'ライリーの想像上の友達', quote: '忘れられつつある大切な思い出。最後の選択が涙を誘う。' }
+      joy: { name: 'ジョイ', role: '喜びの感情 · リーダー', quote: 'ライリーを幸せにすることだけを考えるポジティブな感情。' },
+      sadness: { name: 'サドネス', role: '悲しみの感情', quote: '役に立てないと思っていたが、実は最も重要な感情。' },
+      anger: { name: 'アンガー', role: '怒りの感情', quote: '頭から炎を出す短気者。でも正義感が強い。' },
+      fear: { name: 'フィアー', role: '恐怖の感情', quote: '危険を察知する。怖がりだけど、ライリーを守る。' },
+      disgust: { name: 'ディスガスト', role: '嫌悪の感情', quote: 'センスが高く、ライリーのファッションと食事を管理。' },
+      bingbong: { name: 'ビン・ボン', role: 'ライリーの想像上の友達', quote: '忘れられつつある大切な思い出。最後の選択が涙を誘う。' }
     },
     coco: {
       miguel: { name: 'ミゲル', role: '音楽好きな少年', quote: '音楽を禁じられた家族に反発し、夢を追う12歳の少年。' },
-      hector: { name: 'ヘクター', role: '死者の国の住人', quote: '明るくてずる賢い。でも秘密を抱えた哀しい男。' },
-      delacruz: { name: 'デラクルス', role: '伝説の歌手', quote: 'ミゲルが憧れるスーパースター。その裏の顔とは。' },
+      hector: { name: 'ヘクトル', role: '死者の国の住人', quote: '明るくてずる賢い。でも秘密を抱えた哀しい男。' },
+      delacruz: { name: 'エルネスト・デラクルス', role: '伝説の歌手', quote: 'ミゲルが憧れるスーパースター。その裏の顔とは。' },
       mamaCoco: { name: 'ママ・ココ', role: 'ミゲルのひいひいおばあちゃん', quote: 'ぼんやりとした記憶の中に宿る、深い愛と悲しみ。' },
       dante: { name: 'ダンテ', role: 'ミゲルの愛犬', quote: '陽気なメキシカン・ヘアレス。どこでもついてくる。' }
     },
@@ -69,7 +74,7 @@ const CHAR_TRANSLATIONS = {
     },
     monsters: {
       sully: { name: 'ジェームズ・P・サリバン', role: '怪獣 · トップスカラー', quote: '"サリー" の愛称で呼ばれる、会社一のエース。' },
-      mike: { name: 'マイク・ワズowski', role: 'モンスター · サリーの相棒', quote: '"I\'m watching you, Wazowski!" 目が多いのが自慢。' },
+      mike: { name: 'マイク・ワゾウスキ', role: 'モンスター · サリーの相棒', quote: '"I\'m watching you, Wazowski!" 目が多いのが自慢。' },
       boo: { name: 'ブー', role: '人間の女の子', quote: '"キティ！" サリーをそう呼ぶ、無邪気な少女。' },
       randall: { name: 'ランドール・ボッグス', role: 'カメレオンモンスター · ライバル', quote: '透明化能力を使い、サリーの座を狙う。' },
       roz: { name: 'ロズ', role: '書類管理 · 厳格な上司', quote: '"I\'m watching you, Wazowski. Always watching."' },
@@ -81,6 +86,42 @@ const CHAR_TRANSLATIONS = {
       colette: { name: 'コレット', role: 'シェフ · キッチンのエース', quote: '男性支配の厨房で実力を証明した、たくましい女性。' },
       ego: { name: 'アントン・イーゴ', role: '美食評論家 · 冷徹な批評家', quote: '"In many ways, the work of a critic is easy." 評論家の仕事は簡単だ。' },
       emile: { name: 'エミール', role: 'レミーの兄 · 食いしん坊', quote: '何でも食べる、レミーを心配する兄。' }
+    },
+    zootopia: {
+      judy: { name: 'ジュディ・ホップス', role: 'ウサギ · 警察官', quote: '誰かを傷つけるのは、自分の弱さを認めることだ。' },
+      nick: { name: 'ニック・ワイルド', role: 'キツネ · 詐欺師', quote: '君はただのウサギじゃない、ジュディ。' },
+      bellwether: { name: 'ベルウェザー', role: '羊 · 副市長', quote: 'ズートピアは皆が仲良く暮らす街のはず…' },
+      bogo: { name: 'ボゴ署長', role: 'アフリカ水牛 · 警察署長', quote: '現実を見ろ、ホップス。' },
+      flash: { name: 'フラッシュ', role: 'ナマケモノ · DMV職員', quote: 'ナマ…ケモ…ノ…です…' },
+      clawhauser: { name: 'クロウハウザー', role: 'チーター · 受付', quote: 'ドーナツが好きすぎて困る！' }
+    },
+    cars: {
+      mcqueen: { name: 'ライトニング・マックィーン', role: 'レーサー', quote: 'スピードは俺の全てだ！' },
+      mater: { name: 'メーター', role: 'レッカー車', quote: 'トマトがなくても大丈夫さ！' },
+      sally: { name: 'サリー', role: 'ポルシェ', quote: 'この町の歴史を守りたい。' },
+      doc: { name: 'ドク・ハドソン', role: '元チャンピオン', quote: '走るためには、どこで走るかが大事だ。' },
+      ramone: { name: 'ラモーン', role: 'ペイント職人', quote: 'カラフルに決まってるさ！' }
+    },
+    walle: {
+      walle: { name: 'ウォーリー', role: 'ゴミ収集ロボット', quote: 'イヴ…' },
+      eve: { name: 'イヴ', role: '調査ロボット', quote: '指令を遂行する。' },
+      auto: { name: 'オート', role: '操縦AI', quote: 'プロトコル優先。' },
+      captain: { name: 'マックリア船長', role: '船長', quote: '植物だと！？' },
+      moe: { name: 'M-O', role: '清掃ロボット', quote: '外宇宙は危険だ！' }
+    },
+    brave: {
+      merida: { name: 'メリダ', role: 'プリンセス', quote: '自分の運命は自分で決める！' },
+      elinor: { name: 'エレノア（王妃）', role: '王妃', quote: '王家の伝統を守りなさい。' },
+      fergus: { name: 'ファーガス王', role: '王', quote: '熊には負けんぞ！' },
+      mordeu: { name: 'モルデュー', role: '魔熊', quote: '（咆哮）' },
+      witch: { name: '森の魔女', role: '魔法使い', quote: '運命を変えたいなら、ケーキを。' }
+    },
+    luca: {
+      luca: { name: 'ルカ', role: '海の怪物', quote: 'シルエンツォ、ブラーノ！' },
+      alberto: { name: 'アルベルト', role: '親友', quote: 'シルエンツォ！' },
+      giulia: { name: 'ジュリア', role: '少女', quote: '負けないわよ！' },
+      ercole: { name: 'エルコーレ', role: 'ヴィラン', quote: 'この町は俺のものだ！' },
+      machiavelli: { name: 'マキャベリ', role: 'ジュリアの飼い猫', quote: 'ゴロゴロ……グルグル。' }
     }
   },
   en: {
@@ -151,6 +192,42 @@ const CHAR_TRANSLATIONS = {
       colette: { name: 'Colette', role: 'Chef · Kitchen ace', quote: 'Tough woman who proved herself.' },
       ego: { name: 'Anton Ego', role: 'Food critic', quote: '"The work of a critic is easy."' },
       emile: { name: 'Emile', role: 'Remy\'s brother', quote: 'Eat-anything brother who cares.' }
+    },
+    zootopia: {
+      judy: { name: 'Judy Hopps', role: 'Rabbit · Police officer', quote: 'Anyone can be anything.' },
+      nick: { name: 'Nick Wilde', role: 'Fox · Con artist', quote: 'You\'re not just a bunny, Judy.' },
+      bellwether: { name: 'Bellwether', role: 'Sheep · Assistant mayor', quote: 'Zootopia should be peaceful…' },
+      bogo: { name: 'Chief Bogo', role: 'Buffalo · Police chief', quote: 'Life isn\'t a cartoon musical.' },
+      flash: { name: 'Flash', role: 'Sloth · DMV clerk', quote: 'I am… sloth…' },
+      clawhauser: { name: 'Clawhauser', role: 'Cheetah · Receptionist', quote: 'Donuts are life!' }
+    },
+    cars: {
+      mcqueen: { name: 'Lightning McQueen', role: 'Racer', quote: 'I am speed!' },
+      mater: { name: 'Mater', role: 'Tow truck', quote: 'Tomato-free zone!' },
+      sally: { name: 'Sally', role: 'Porsche', quote: 'Protect this town.' },
+      doc: { name: 'Doc Hudson', role: 'Legend', quote: 'It\'s about where you drive.' },
+      ramone: { name: 'Ramone', role: 'Paint shop', quote: 'Go colorful!' }
+    },
+    walle: {
+      walle: { name: 'WALL·E', role: 'Waste robot', quote: 'Eve…' },
+      eve: { name: 'EVE', role: 'Probe robot', quote: 'Directive.' },
+      auto: { name: 'AUTO', role: 'Ship AI', quote: 'A113.' },
+      captain: { name: 'Captain McCrea', role: 'Axiom captain', quote: 'A plant!' },
+      moe: { name: 'M-O', role: 'Cleaner bot', quote: 'Foreign contaminate!' }
+    },
+    brave: {
+      merida: { name: 'Merida', role: 'Princess of DunBroch', quote: 'I choose my fate!' },
+      elinor: { name: 'Queen Elinor', role: 'Queen of DunBroch', quote: 'A princess strives for perfection.' },
+      fergus: { name: 'King Fergus', role: 'King of DunBroch', quote: 'I\'ll fight any bear!' },
+      mordeu: { name: 'Mor\'du', role: 'Legendary demon bear', quote: '(Roar)' },
+      witch: { name: 'The Witch', role: 'Woodcarver', quote: 'Fate-changing cake.' }
+    },
+    luca: {
+      luca: { name: 'Luca', role: 'Sea monster', quote: 'Silenzio, Bruno!' },
+      alberto: { name: 'Alberto', role: 'Best friend', quote: 'Silenzio!' },
+      giulia: { name: 'Giulia', role: 'Human girl', quote: 'I won\'t lose!' },
+      ercole: { name: 'Ercole', role: 'Bully', quote: 'This town is mine!' },
+      machiavelli: { name: 'Machiavelli', role: 'Giulia\'s cat', quote: 'Purring in Portorosso.' }
     }
   },
   ko: {
@@ -190,13 +267,13 @@ const CHAR_TRANSLATIONS = {
       sadness: { name: '슬픔이', role: '슬픔 감정', quote: '쓸모없다 여겼지만 가장 중요한 감정.' },
       anger: { name: '버럭이', role: '분노 감정', quote: '머리에서 불이 나는 성격.' },
       fear: { name: '소심이', role: '두려움 감정', quote: '겁 많지만 라일리를 지킨다.' },
-      disgust: { name: '진저', role: '혐오 감정', quote: '라일리의 패션과 식사를 관리.' },
+      disgust: { name: '까칠이', role: '혐오 감정', quote: '라일리의 패션과 식사를 관리.' },
       bingbong: { name: '빙봉', role: '상상의 친구', quote: '잊혀져 가는 소중한 추억.' }
     },
     coco: {
       miguel: { name: '미겔', role: '음악을 사랑하는 소년', quote: '꿈을 쫓는 12살 소년.' },
       hector: { name: '헥터', role: '망자의 나라 주민', quote: '밝지만 비밀을 품은 남자.' },
-      delacruz: { name: '에르네스토', role: '전설의 가수', quote: '미겔이 동경하는 스타.' },
+      delacruz: { name: '에르네스토 델라 크루즈', role: '전설의 가수', quote: '미겔이 동경하는 스타.' },
       mamaCoco: { name: '마마 코코', role: '증조할머니', quote: '희미한 기억 속의 사랑과 슬픔.' },
       dante: { name: '단테', role: '미겔의 개', quote: '어디든 따라오는 쾌활한 멍멍이.' }
     },
@@ -209,18 +286,54 @@ const CHAR_TRANSLATIONS = {
     },
     monsters: {
       sully: { name: '설리', role: '괴물 · 최고 스키어러', quote: '회사 최고 에이스 "설리."' },
-      mike: { name: '마이크', role: '괴물 · 설리의 파트너', quote: '"I\'m watching you, Wazowski!"' },
+      mike: { name: '마이크 와소스키', role: '괴물 · 설리의 파트너', quote: '"I\'m watching you, Wazowski!"' },
       boo: { name: '부', role: '인간 소녀', quote: '"키티!" 순수한 소녀.' },
       randall: { name: '랜달', role: '카멜레온 괴물', quote: '투명화 능력의 라이벌.' },
       roz: { name: '로즈', role: '엄격한 상사', quote: '"항상 지켜보고 있어."' },
-      celia: { name: '셀리아', role: '마이크의 여자친구', quote: '뱀 머리 리셉션ist.' }
+      celia: { name: '셀리아 메이', role: '마이크의 여자친구 · 접수', quote: '뱀 머리를 한 접수 담당.' }
     },
     ratatouille: {
       remy: { name: '레미', role: '쥐 · 천재 셰프', quote: '"Anyone can cook!"' },
-      linguini: { name: '링귀니', role: '설거지 · 파트너', quote: '서툴지만 따뜻한 후예.' },
+      linguini: { name: '알프레도 링귀니', role: '설거지 · 파트너', quote: '서툴지만 따뜻한 후예.' },
       colette: { name: '콜렛', role: '셰프 · 키친 에이스', quote: '실력으로 증명한 강인한 여성.' },
       ego: { name: '안톤 이고', role: '미식 평론가', quote: '평론가의 일은 쉽다.' },
       emile: { name: '에밀', role: '레미의 형', quote: '먹는 걸 좋아하는 형.' }
+    },
+    zootopia: {
+      judy: { name: '주디 홉스', role: '토끼 · 경찰', quote: '누구나 무엇이든 될 수 있어.' },
+      nick: { name: '닉 와일드', role: '여우 · 사기꾼', quote: '넌 그냥 토끼가 아니야, 주디.' },
+      bellwether: { name: '벨웨더', role: '양 · 부시장', quote: '주토피아는 평화로운 도시여야 해…' },
+      bogo: { name: '보고 서장', role: '물소 · 경찰서장', quote: '현실을 봐, 홉스.' },
+      flash: { name: '플래시', role: '나무늘보 · DMV', quote: '나…무…늘…보…' },
+      clawhauser: { name: '클로하우저', role: '치타 · 접수', quote: '도넛이 최고!' }
+    },
+    cars: {
+      mcqueen: { name: '라이트닝 맥퀸', role: '레이서', quote: '나는 스피드다!' },
+      mater: { name: '메이터', role: '견인차', quote: '토마토 없어도 OK!' },
+      sally: { name: '샐리', role: '포르쉐', quote: '이 마을을 지키고 싶어.' },
+      doc: { name: '독 허드슨', role: '전설', quote: '어디서 달리느냐가 중요해.' },
+      ramone: { name: '라몬', role: '페인트', quote: '화려하게!' }
+    },
+    walle: {
+      walle: { name: '월-E', role: '청소 로봇', quote: '이브…' },
+      eve: { name: '이브', role: '조사 로봇', quote: '지시를 수행한다.' },
+      auto: { name: '오토', role: 'AI', quote: 'A113.' },
+      captain: { name: '맥크리어 선장', role: '액시엄 호 선장', quote: '식물이다!' },
+      moe: { name: '모', role: '청소 로봇', quote: '외부는 위험해!' }
+    },
+    brave: {
+      merida: { name: '메리다', role: '던브로치 왕국의 공주', quote: '내 운명은 내가 정해!' },
+      elinor: { name: '엘리노어 여왕', role: '던브로치의 여왕', quote: '전통을 지켜라.' },
+      fergus: { name: '퍼거스 왕', role: '던브로치의 왕', quote: '곰은 무섭지 않다!' },
+      mordeu: { name: '모르두', role: '전설의 마법 곰', quote: '(포효)' },
+      witch: { name: '마녀', role: '나무 조각가', quote: '운명을 바꿀 케이크.' }
+    },
+    luca: {
+      luca: { name: '루카', role: '바다 괴물', quote: '실렌초, 브루노!' },
+      alberto: { name: '알베르토', role: '친구', quote: '실렌초!' },
+      giulia: { name: '줄리아', role: '소녀', quote: '지지 않아!' },
+      ercole: { name: '에르콜레', role: '괴롭힘', quote: '이 마을은 내 것!' },
+      machiavelli: { name: '마키아벨리', role: '줄리아의 고양이', quote: '그루룽거리며 포르토로소를 거닐다.' }
     }
   }
 };
@@ -234,5 +347,6 @@ function getCharText(movieId, charId) {
 
 function getCharImg(movieId, charId) {
   const file = CHAR_IMAGES[movieId]?.[charId];
-  return file ? `./img/cara/${file}` : '';
+  if (file) return assetUrl(`img/cara/${file}`);
+  return assetUrl('img/top/Pixar_new_logo.svg');
 }

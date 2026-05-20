@@ -1,0 +1,126 @@
+.char-page.theme-toy,
+body.char-active.theme-toy,
+body.detail-active.theme-toy {
+  --theme-1: #2a5080;
+  --theme-2: #3b82f6;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(59, 130, 246, 0.28);
+  --char-bg: url('../img/back/toy.avif');
+}
+.char-page.theme-nemo,
+body.char-active.theme-nemo,
+body.detail-active.theme-nemo {
+  --theme-1: #1a4060;
+  --theme-2: #0284c7;
+  --theme-3: #38bdf8;
+  --theme-glow: rgba(2, 132, 199, 0.28);
+  --char-bg: url('../img/back/nemo.jpg');
+}
+.char-page.theme-incredibles,
+body.char-active.theme-incredibles,
+body.detail-active.theme-incredibles {
+  --theme-1: #6a1818;
+  --theme-2: #dc2626;
+  --theme-3: #fca5a5;
+  --theme-glow: rgba(220, 38, 38, 0.25);
+  --char-bg: url('../img/back/inc.jpg');
+}
+.char-page.theme-up,
+body.char-active.theme-up,
+body.detail-active.theme-up {
+  --theme-1: #1a5030;
+  --theme-2: #22c55e;
+  --theme-3: #86efac;
+  --theme-glow: rgba(34, 197, 94, 0.25);
+  --char-bg: url('../img/back/carl.avif');
+}
+.char-page.theme-insideout,
+body.char-active.theme-insideout,
+body.detail-active.theme-insideout {
+  --theme-1: #3a1860;
+  --theme-2: #9333ea;
+  --theme-3: #c4b5fd;
+  --theme-glow: rgba(147, 51, 234, 0.28);
+  --char-bg: url('../img/back/insaid.avif');
+}
+.char-page.theme-coco,
+body.char-active.theme-coco,
+body.detail-active.theme-coco {
+  --theme-1: #6a2008;
+  --theme-2: #f97316;
+  --theme-3: #fdba74;
+  --theme-glow: rgba(249, 115, 22, 0.28);
+  --char-bg: url('../img/back/remember.webp');
+}
+.char-page.theme-soul,
+body.char-active.theme-soul,
+body.detail-active.theme-soul {
+  --theme-1: #0a3040;
+  --theme-2: #14b8a6;
+  --theme-3: #5eead4;
+  --theme-glow: rgba(20, 184, 166, 0.28);
+  --char-bg: url('../img/back/souru.jpg');
+}
+.char-page.theme-monsters,
+body.char-active.theme-monsters,
+body.detail-active.theme-monsters {
+  --theme-1: #1a2850;
+  --theme-2: #2563eb;
+  --theme-3: #93c5fd;
+  --theme-glow: rgba(37, 99, 235, 0.28);
+  --char-bg: url('../img/back/monster.jpg');
+}
+.char-page.theme-ratatouille,
+body.char-active.theme-ratatouille,
+body.detail-active.theme-ratatouille {
+  --theme-1: #4a1808;
+  --theme-2: #dc2626;
+  --theme-3: #fca5a5;
+  --theme-glow: rgba(220, 38, 38, 0.25);
+  --char-bg: url('../img/back/remi.webp');
+}
+.char-page.theme-zootopia,
+body.char-active.theme-zootopia,
+body.detail-active.theme-zootopia {
+  --theme-1: #4c1d95;
+  --theme-2: #7c3aed;
+  --theme-3: #c4b5fd;
+  --theme-glow: rgba(124, 58, 237, 0.3);
+  --char-bg: url('../img/back/zoo.jpg');
+}
+.char-page.theme-cars,
+body.char-active.theme-cars,
+body.detail-active.theme-cars {
+  --theme-1: #7f1d1d;
+  --theme-2: #dc2626;
+  --theme-3: #fecaca;
+  --theme-glow: rgba(220, 38, 38, 0.28);
+  --char-bg: url('../img/back/cars.webp');
+}
+.char-page.theme-walle,
+body.char-active.theme-walle,
+body.detail-active.theme-walle {
+  --theme-1: #1a2838;
+  --theme-2: #64748b;
+  --theme-3: #cbd5e1;
+  --theme-glow: rgba(100, 116, 139, 0.3);
+  --char-bg: url('../img/back/walle.jpg');
+}
+.char-page.theme-brave,
+body.char-active.theme-brave,
+body.detail-active.theme-brave {
+  --theme-1: #1a3d28;
+  --theme-2: #16a34a;
+  --theme-3: #86efac;
+  --theme-glow: rgba(22, 163, 74, 0.28);
+  --char-bg: url('../img/back/merida.jpg');
+}
+.char-page.theme-luca,
+body.char-active.theme-luca,
+body.detail-active.theme-luca {
+  --theme-1: #0c4a6e;
+  --theme-2: #0284c7;
+  --theme-3: #7dd3fc;
+  --theme-glow: rgba(2, 132, 199, 0.28);
+  --char-bg: url('../img/back/ruka.webp');
+}

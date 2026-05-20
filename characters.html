@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>
+(function () {
+  var id = new URLSearchParams(location.search).get('id');
+  location.replace(id ? 'characters/' + encodeURIComponent(id) + '.html' : 'index.html');
+})();
+</script>
+</head>
+<body></body>
+</html>

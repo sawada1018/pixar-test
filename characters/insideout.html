@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>PIXAR — キャラクター</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../pixar.css">
+</head>
+<body data-page="characters" data-movie="insideout" class="page-characters char-active theme-insideout">
+
+<header>
+  <div class="logo"><a href="../index.html"><img src="../img/top/Pixar_new_logo.svg" alt="PIXAR"></a></div>
+  <div class="header-right">
+    <div class="lang-dropdown" data-lang-dropdown>
+      <button type="button" class="lang-dropdown-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" data-lang-current>日本語</span>
+        <span class="lang-dropdown-chevron" aria-hidden="true"></span>
+      </button>
+      <ul class="lang-dropdown-menu" role="listbox" aria-labelledby="langToggle" hidden>
+        <li><button type="button" class="lang-option" role="option" data-lang="ja">日本語</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="en">English</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="ko">한국어</button></li>
+      </ul>
+    </div>
+    <div class="tagline" data-i18n="tagline">映画の世界へようこそ</div>
+  </div>
+</header>
+
+<main class="char-page char-layout active theme-insideout">
+  <a class="back-btn" href="../index.html">← 映画一覧に戻る</a>
+  <div class="char-intro" id="charIntro">
+    <div class="char-intro-header">
+      <h1 class="grad-text char-intro-title">インサイド・ヘッド</h1>
+      <div class="year-badge char-intro-year">2015 · ANIMATION · DRAMA</div>
+      <span class="movie-tag char-intro-tag" style="color:#c4b5fd;border-color:#7c3aed">EMOTION</span>
+    </div>
+    <div class="char-intro-body">
+      <div class="char-intro-poster">
+        <img src="../img/top/insideout.jpg" alt="インサイド・ヘッド" loading="lazy">
+      </div>
+      <div class="char-intro-text">
+        <p class="char-intro-lead">11歳の少女ライリーの「頭の中」で生きる感情たち。喜び、悲しみ、怒り、嫌悪、恐怖が織りなす、感情の冒険。</p>
+        <p class="char-intro-detail">引っ越しで混乱するライリーの心の中で、感情たちが大活躍。喜びと悲しみの旅を通じて、すべての感情が大切だと教えてくれる作品です。</p>
+      </div>
+    </div>
+    <div class="char-intro-actions">
+      <a class="btn-secondary" href="../detail/insideout.html">予告編を見る →</a>
+    </div>
+  </div>
+  <div class="char-grid" id="charGrid">
+      <article class="char-card" data-char="joy" style="border-color:rgba(196,181,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/joy.jpeg" alt="ジョイ" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ジョイ</div>
+        <div class="char-role">喜びの感情 · リーダー</div>
+        <p class="char-quote">ライリーを幸せにすることだけを考えるポジティブな感情。</p>
+      </article>
+      <article class="char-card" data-char="sadness" style="border-color:rgba(196,181,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/sadness.jpeg" alt="サドネス" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">サドネス</div>
+        <div class="char-role">悲しみの感情</div>
+        <p class="char-quote">役に立てないと思っていたが、実は最も重要な感情。</p>
+      </article>
+      <article class="char-card" data-char="anger" style="border-color:rgba(196,181,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/anger.jpeg" alt="アンガー" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">アンガー</div>
+        <div class="char-role">怒りの感情</div>
+        <p class="char-quote">頭から炎を出す短気者。でも正義感が強い。</p>
+      </article>
+      <article class="char-card" data-char="fear" style="border-color:rgba(196,181,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/fear.jpeg" alt="フィアー" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">フィアー</div>
+        <div class="char-role">恐怖の感情</div>
+        <p class="char-quote">危険を察知する。怖がりだけど、ライリーを守る。</p>
+      </article>
+      <article class="char-card" data-char="disgust" style="border-color:rgba(196,181,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/disgust.jpeg" alt="ディスガスト" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ディスガスト</div>
+        <div class="char-role">嫌悪の感情</div>
+        <p class="char-quote">センスが高く、ライリーのファッションと食事を管理。</p>
+      </article>
+      <article class="char-card" data-char="bingbong" style="border-color:rgba(196,181,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/bingbong.jpeg" alt="ビン・ボン" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ビン・ボン</div>
+        <div class="char-role">ライリーの想像上の友達</div>
+        <p class="char-quote">忘れられつつある大切な思い出。最後の選択が涙を誘う。</p>
+      </article>
+  </div>
+</main>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/characters.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/movies-ui.js"></script>
+<script src="../js/characters-page.js"></script>
+</body>
+</html>

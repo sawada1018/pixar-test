@@ -1,0 +1,123 @@
+/* ── HEADER ── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0.6rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff;
+  backdrop-filter: none;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+.logo a {
+  display: block;
+  line-height: 0;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.home-page {
+  margin-top: 3.5rem;
+}
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+.lang-dropdown {
+  position: relative;
+}
+.lang-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(28, 28, 46, 0.15);
+  background: #f5f5f8;
+  color: #1c1c2e;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.lang-dropdown-toggle:hover {
+  border-color: rgba(28, 28, 46, 0.3);
+  background: #eeeef2;
+}
+.lang-dropdown.is-open .lang-dropdown-toggle {
+  background: #1c1c2e;
+  color: #fff;
+  border-color: #1c1c2e;
+}
+.lang-dropdown-chevron {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.2s ease;
+}
+.lang-dropdown.is-open .lang-dropdown-chevron {
+  transform: rotate(180deg);
+}
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  min-width: 9.5rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: #fff;
+  border: 1px solid rgba(28, 28, 46, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 200;
+}
+.lang-dropdown-menu li {
+  margin: 0;
+}
+.lang-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.55rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #1c1c2e;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.lang-option:hover {
+  background: #f0f0f5;
+}
+.lang-option.is-selected {
+  background: #1c1c2e;
+  color: #fff;
+}
+.lang-option.is-selected:hover {
+  background: #2a2a42;
+}
+.tagline {
+  font-size: 0.75rem;
+  color: rgba(28,28,46,0.55);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+html[lang="ko"] body {
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>PIXAR — キャラクター</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../pixar.css">
+</head>
+<body data-page="characters" data-movie="walle" class="page-characters char-active theme-walle">
+
+<header>
+  <div class="logo"><a href="../index.html"><img src="../img/top/Pixar_new_logo.svg" alt="PIXAR"></a></div>
+  <div class="header-right">
+    <div class="lang-dropdown" data-lang-dropdown>
+      <button type="button" class="lang-dropdown-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" data-lang-current>日本語</span>
+        <span class="lang-dropdown-chevron" aria-hidden="true"></span>
+      </button>
+      <ul class="lang-dropdown-menu" role="listbox" aria-labelledby="langToggle" hidden>
+        <li><button type="button" class="lang-option" role="option" data-lang="ja">日本語</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="en">English</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="ko">한국어</button></li>
+      </ul>
+    </div>
+    <div class="tagline" data-i18n="tagline">映画の世界へようこそ</div>
+  </div>
+</header>
+
+<main class="char-page char-layout active theme-walle">
+  <a class="back-btn" href="../index.html">← 映画一覧に戻る</a>
+  <div class="char-intro" id="charIntro">
+    <div class="char-intro-header">
+      <h1 class="grad-text char-intro-title">ウォーリー</h1>
+      <div class="year-badge char-intro-year">2008 · SCI-FI · ROMANCE</div>
+      <span class="movie-tag char-intro-tag" style="color:#cbd5e1;border-color:#64748b">SPACE</span>
+    </div>
+    <div class="char-intro-body">
+      <div class="char-intro-poster">
+        <img src="../img/back/pixcer.jpg" alt="ウォーリー" loading="lazy">
+      </div>
+      <div class="char-intro-text">
+        <p class="char-intro-lead">何百年も地球でゴミを片付け続けるロボット・ウォーリー。ある日現れたイヴとの出会いが、人類の未来を変えていく。</p>
+        <p class="char-intro-detail">ほとんどセリフのない冒頭から始まる、環境と愛の物語。小さなロボットの純粋な想いが、宇宙規模の奇跡を呼び起こします。</p>
+      </div>
+    </div>
+    <div class="char-intro-actions">
+      <a class="btn-secondary" href="../detail/walle.html">予告編を見る →</a>
+    </div>
+  </div>
+  <div class="char-grid" id="charGrid">
+      <article class="char-card" data-char="walle" style="border-color:rgba(203,213,225,0.35)">
+        <span class="char-emoji">
+          <img src="../img/cara/wo.jpeg" alt="ウォーリー" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ウォーリー</div>
+        <div class="char-role">ゴミ収集ロボット</div>
+        <p class="char-quote">イヴ…</p>
+      </article>
+      <article class="char-card" data-char="eve" style="border-color:rgba(203,213,225,0.35)">
+        <span class="char-emoji">
+          <img src="../img/cara/baz.jpeg" alt="イヴ" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">イヴ</div>
+        <div class="char-role">調査ロボット</div>
+        <p class="char-quote">指令を遂行する。</p>
+      </article>
+      <article class="char-card" data-char="auto" style="border-color:rgba(203,213,225,0.35)">
+        <span class="char-emoji">
+          <img src="../img/cara/terry.webp" alt="オート" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">オート</div>
+        <div class="char-role">操縦AI</div>
+        <p class="char-quote">プロトコル優先。</p>
+      </article>
+      <article class="char-card" data-char="captain" style="border-color:rgba(203,213,225,0.35)">
+        <span class="char-emoji">
+          <img src="../img/cara/bruce.jpeg" alt="マックリア船長" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">マックリア船長</div>
+        <div class="char-role">船長</div>
+        <p class="char-quote">植物だと！？</p>
+      </article>
+      <article class="char-card" data-char="moe" style="border-color:rgba(203,213,225,0.35)">
+        <span class="char-emoji">
+          <img src="../img/cara/hum.jpeg" alt="M-O" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">M-O</div>
+        <div class="char-role">清掃ロボット</div>
+        <p class="char-quote">外宇宙は危険だ！</p>
+      </article>
+  </div>
+</main>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/characters.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/movies-ui.js"></script>
+<script src="../js/characters-page.js"></script>
+</body>
+</html>

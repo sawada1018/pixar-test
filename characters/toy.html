@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>PIXAR — キャラクター</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../pixar.css">
+</head>
+<body data-page="characters" data-movie="toy" class="page-characters char-active theme-toy">
+
+<header>
+  <div class="logo"><a href="../index.html"><img src="../img/top/Pixar_new_logo.svg" alt="PIXAR"></a></div>
+  <div class="header-right">
+    <div class="lang-dropdown" data-lang-dropdown>
+      <button type="button" class="lang-dropdown-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" data-lang-current>日本語</span>
+        <span class="lang-dropdown-chevron" aria-hidden="true"></span>
+      </button>
+      <ul class="lang-dropdown-menu" role="listbox" aria-labelledby="langToggle" hidden>
+        <li><button type="button" class="lang-option" role="option" data-lang="ja">日本語</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="en">English</button></li>
+        <li><button type="button" class="lang-option" role="option" data-lang="ko">한국어</button></li>
+      </ul>
+    </div>
+    <div class="tagline" data-i18n="tagline">映画の世界へようこそ</div>
+  </div>
+</header>
+
+<main class="char-page char-layout active theme-toy">
+  <a class="back-btn" href="../index.html">← 映画一覧に戻る</a>
+  <div class="char-intro" id="charIntro">
+    <div class="char-intro-header">
+      <h1 class="grad-text char-intro-title">トイ・ストーリー</h1>
+      <div class="year-badge char-intro-year">1995 · ADVENTURE · COMEDY</div>
+      <span class="movie-tag char-intro-tag" style="color:#93c5fd;border-color:#2563eb">CLASSIC</span>
+    </div>
+    <div class="char-intro-body">
+      <div class="char-intro-poster">
+        <img src="../img/top/toy.jpg" alt="トイ・ストーリー" loading="lazy">
+      </div>
+      <div class="char-intro-text">
+        <p class="char-intro-lead">アンディの部屋で生きるおもちゃたち。人間が見ていない時、彼らは動き、話し、笑い、泣く。友情と成長の物語。</p>
+        <p class="char-intro-detail">ピクサー初の長編アニメーション。おもちゃたちの王様ウッディと、新入りのスペースレンジャー・バズの出会いと対立、そして本当の友情を描いた不朽の名作です。</p>
+      </div>
+    </div>
+    <div class="char-intro-actions">
+      <a class="btn-secondary" href="../detail/toy.html">予告編を見る →</a>
+    </div>
+  </div>
+  <div class="char-grid" id="charGrid">
+      <article class="char-card" data-char="woody" style="border-color:rgba(147,197,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/wo.jpeg" alt="ウッディ" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ウッディ</div>
+        <div class="char-role">カウボーイ人形 · リーダー</div>
+        <p class="char-quote">&quot;Reach for the sky!&quot; 空に向かって手を上げな！</p>
+      </article>
+      <article class="char-card" data-char="buzz" style="border-color:rgba(147,197,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/baz.jpeg" alt="バズ・ライトイヤー" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">バズ・ライトイヤー</div>
+        <div class="char-role">スペースレンジャー</div>
+        <p class="char-quote">&quot;To infinity and beyond!&quot; 無限の彼方へ！</p>
+      </article>
+      <article class="char-card" data-char="ham" style="border-color:rgba(147,197,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/hum.jpeg" alt="ハム" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ハム</div>
+        <div class="char-role">貯金箱ブタ · 物知り</div>
+        <p class="char-quote">ちゃっかり屋だけど頼りになる。</p>
+      </article>
+      <article class="char-card" data-char="forky" style="border-color:rgba(147,197,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/forky.jpeg" alt="フォーキー" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">フォーキー</div>
+        <div class="char-role">先割れスプーンのおもちゃ</div>
+        <p class="char-quote">目を離すとすぐにゴミ箱に入りたがる。</p>
+      </article>
+      <article class="char-card" data-char="jesse" style="border-color:rgba(147,197,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/jesse.jpeg" alt="ジェシー" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">ジェシー</div>
+        <div class="char-role">カウガール人形 · 元気者</div>
+        <p class="char-quote">ぱっと明るく、どんなピンチも乗り越える！</p>
+      </article>
+      <article class="char-card" data-char="alien" style="border-color:rgba(147,197,253,0.3)">
+        <span class="char-emoji">
+          <img src="../img/cara/alien.jpeg" alt="リトル・グリーンメン" width="200" height="150" loading="lazy">
+        </span>
+        <div class="char-name">リトル・グリーンメン</div>
+        <div class="char-role">UFOキャッチャーの宇宙人</div>
+        <p class="char-quote">&quot;The Claw!&quot; ザ・クロー！！</p>
+      </article>
+  </div>
+</main>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/characters.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/movies-ui.js"></script>
+<script src="../js/characters-page.js"></script>
+</body>
+</html>

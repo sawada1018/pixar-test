@@ -1,0 +1,203 @@
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    height: 34px;
+  }
+
+  .tagline {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-align: right;
+    line-height: 1.4;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .home-page {
+    margin-top: 3.25rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem 4rem;
+  }
+
+  .movie-card,
+  .movie-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card-overlay {
+    display: none;
+  }
+
+  .movie-card:active {
+    opacity: 0.88;
+  }
+
+  .section-title {
+    padding: 3rem 1rem 2rem;
+  }
+
+  body.char-active::before,
+  body.detail-active::before {
+    transform: none;
+    background-position: center 30%;
+  }
+
+  body.char-active::after,
+  body.detail-active::after {
+    background: linear-gradient(
+      180deg,
+      rgba(28, 28, 46, 0.65) 0%,
+      rgba(28, 28, 46, 0.82) 50%,
+      rgba(28, 28, 46, 0.94) 100%
+    );
+  }
+
+  .detail-page {
+    padding: 4.5rem 1rem 2.5rem;
+    max-width: 100%;
+  }
+
+  .char-intro {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .char-intro-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .char-intro-poster {
+    width: min(160px, 55vw);
+    margin: 0 auto;
+  }
+
+  .detail-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .detail-poster {
+    width: 130px;
+  }
+
+  .detail-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .movie-card-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+
+  a.btn-card {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 0.72rem;
+    padding: 0.55rem 0.35rem;
+    white-space: normal;
+  }
+
+  .char-page {
+    padding: 4.5rem 1rem 2.5rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .char-page .back-btn {
+    margin-bottom: 1.25rem;
+    font-size: 0.8rem;
+    padding: 0.45rem 1rem;
+  }
+
+  .char-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .char-hero-visual {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+  }
+
+  .char-hero-text {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .char-hero-text h1 {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+    line-height: 1.15;
+    word-break: break-word;
+  }
+
+  .char-hero-text p {
+    max-width: none;
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .char-hero-text .year-badge {
+    font-size: 0.7rem;
+  }
+
+  .char-grid {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+
+  .char-page .char-card {
+    padding: 1.15rem;
+  }
+
+  .char-page .char-card .char-emoji {
+    height: 230px;
+  }
+
+  .char-page .char-card .char-emoji img {
+    object-position: center 22%;
+  }
+
+  .char-card .char-name {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  .char-card .char-role,
+  .char-card .char-quote {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .tagline {
+    display: none;
+  }
+
+  .char-hero-visual {
+    width: 110px;
+    height: 110px;
+  }
+
+  .char-page .char-card .char-emoji {
+    height: 210px;
+  }
+}
